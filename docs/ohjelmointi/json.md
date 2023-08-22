@@ -1,1 +1,1 @@
-**TODO** JSON-tiedoston formaatti esitellään täällä.
+**TODO** JSON-tiedoston formaatti esitellään täällä lyhyesti.
