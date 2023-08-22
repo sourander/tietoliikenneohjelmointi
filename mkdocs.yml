@@ -1,0 +1,56 @@
+site_name: Tietoliikenneohjelmointi
+
+theme:
+  name: material
+  features:
+    - content.code.copy     # add copy button to code blocks
+    - content.code.annotate # add annotation support to code blocks
+  # Day and night mode
+  palette:
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+markdown_extensions:
+  # SYNTAX HIGHLIGHTING
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # EMOJIS AND ICONS
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # MERMAID DIAGRAMS
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # Keyboard key symbols
+  - pymdownx.keys
+  # Mark text by wrapping it between dual pairs of = symbols
+  - pymdownx.mark
+  # Admonition call-outs such as "!!! note", and support for making call-outs collapsible
+  - admonition
+  - pymdownx.details
+
+plugins:
+  # Navigation page ordering
+  - awesome-pages
+  - search
+
+copyright: |
+  Copyright &copy; 2023 <a href="https://www.kamk.fi">Kajaanin Ammattikorkeakoulu Oy</a>. 
+  Licenced under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">BY-NC-ND 4.0</a>
