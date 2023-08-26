@@ -22,6 +22,11 @@ sequenceDiagram
     Note right of client: Tiedonsiirto alkaa
     client->>server: HTTP-pyyntö
     server->>client: HTTP-vastaus
+    Note right of client: Muut resurssit (CSS, JS)
+    client->>server: HTTP-pyyntö
+    server->>client: HTTP-vastaus
+    client->>server: HTTP-pyyntö
+    server->>client: HTTP-vastaus
     Note right of client: Yhteyden lopetus alkaa
     client->>server: TCP-lopetus FIN
     server->>client: TCP-lopetus ACK + FIN
