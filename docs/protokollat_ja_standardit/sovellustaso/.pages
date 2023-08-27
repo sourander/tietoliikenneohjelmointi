@@ -1,6 +1,8 @@
 nav:
+  - telnet.md
   - HTTP: http.md
   - HTTPS: https.md
   - WebSocket: websocket.md
   - MQTT: mqtt.md
   - QUIC: quic.md
+  - ...
