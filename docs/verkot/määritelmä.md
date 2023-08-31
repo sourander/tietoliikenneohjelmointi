@@ -16,6 +16,9 @@ flowchart LR
 
 Verkkotyöskentelyyn liittyvät teknologiat kuvataan usein erilaisilla malleilla, joissa niiden eri toiminallisuudet on siilottu eri kerroksiin (eng. layers). Jokaisella kerroksella on tehtävä. Jokainen kerros tuottaa ylemmälle palvelua, ja ylempi käyttää alemman palvelua. Kahden kerroksen välissä on yhteisesti sovittu rajapinta (eng. interface). Koska jokainen kerros tuottaa ylemmälle palvelua, alin kerros suorittaa konkreettisinta tehtävää ja ylin abstrakteinta.
 
+!!! question "Tehtävä"
+    Lue ja varmista, että ymmärrät termin "abstrakti" ohjelmistonkehityksen kontekstissa oikein. Tämä artikkeli on suositeltu lähde: [The Valuable Dev: What Are Abstractions in Software Engineering with Examples](https://thevaluable.dev/abstraction-type-software-example/)
+
 ```mermaid
 flowchart TD
     A[abstraktimpi] --- B[abstrakti] --- C[konkreettinen]
