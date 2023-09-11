@@ -142,10 +142,10 @@
         </g>
         <text x="279px" y="131px" style="font-family:'Calibri', sans-serif;font-size:12px;">R<tspan x="285.305px 291.275px 307.4px " y="131px 131px 131px ">ein</tspan></text>
         <text x="279px" y="145.648px" style="font-family:'Calibri', sans-serif;font-size:12px;">ethLan</text>
-        <text x="279px" y="160.297px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP: 11.22.33.1</text>
+        <text x="279px" y="160.297px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP: 10.0.1.1</text>
         <text x="279px" y="174.945px" style="font-family:'Calibri', sans-serif;font-size:12px;">MAC: AA-AA-AA</text>
         <text x="279px" y="204.242px" style="font-family:'Calibri', sans-serif;font-size:12px;">ethW<tspan x="305.49px 311.238px " y="204.242px 204.242px ">an</tspan></text>
-        <text x="279px" y="218.891px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP 2.0.0.1</text>
+        <text x="279px" y="218.891px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP 1.2.3.4</text>
         <text x="279px" y="233.539px" style="font-family:'Calibri', sans-serif;font-size:12px;">MAC: BB-BB-BB</text>
     </g>
     <g transform="matrix(1,0,0,1,172.012,-42.3906)">
@@ -157,22 +157,22 @@
         </g>
         <text x="279px" y="131px" style="font-family:'Calibri', sans-serif;font-size:12px;">R<tspan x="285.305px 291.275px 307.4px " y="131px 131px 131px ">ein</tspan></text>
         <text x="279px" y="145.648px" style="font-family:'Calibri', sans-serif;font-size:12px;">ethLan</text>
-        <text x="279px" y="160.297px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP: 77.66.55.1</text>
+        <text x="279px" y="160.297px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP: 10.0.3.1</text>
         <text x="279px" y="174.945px" style="font-family:'Calibri', sans-serif;font-size:12px;">MAC: CC-CC-CC</text>
         <text x="279px" y="204.242px" style="font-family:'Calibri', sans-serif;font-size:12px;">ethW<tspan x="305.49px 311.238px " y="204.242px 204.242px ">an</tspan></text>
-        <text x="279px" y="218.891px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP 3.0.0.1</text>
+        <text x="279px" y="218.891px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP 1.2.3.5</text>
         <text x="279px" y="233.539px" style="font-family:'Calibri', sans-serif;font-size:12px;">MAC: DD-DD-DD</text>
     </g>
     <g transform="matrix(1,0,0,1,-185.567,-101.102)">
         <text x="279px" y="131px" style="font-family:'Calibri', sans-serif;font-size:12px;">Asiak<tspan x="304.389px 310.137px " y="131px 131px ">as</tspan></text>
         <text x="279px" y="145.648px" style="font-family:'Calibri', sans-serif;font-size:12px;">eth0</text>
-        <text x="279px" y="160.297px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP: 11.22.33.45</text>
+        <text x="279px" y="160.297px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP: 10.0.1.11</text>
         <text x="279px" y="174.945px" style="font-family:'Calibri', sans-serif;font-size:12px;">MAC: 11-11-11</text>
     </g>
     <g transform="matrix(1,0,0,1,353.613,-102.648)">
         <text x="279px" y="131px" style="font-family:'Calibri', sans-serif;font-size:12px;">Asiak<tspan x="304.389px 310.137px " y="131px 131px ">as</tspan></text>
         <text x="279px" y="145.648px" style="font-family:'Calibri', sans-serif;font-size:12px;">eth0</text>
-        <text x="279px" y="160.297px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP:77.66.55.44</text>
+        <text x="279px" y="160.297px" style="font-family:'Calibri', sans-serif;font-size:12px;">IP:10.0.3.22</text>
         <text x="279px" y="174.945px" style="font-family:'Calibri', sans-serif;font-size:12px;">MAC: 22-22-22</text>
     </g>
 </svg>

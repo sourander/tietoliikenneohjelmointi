@@ -85,13 +85,5 @@ Kyllä, siinä on kaikki mitä tarvitsee osata käyttääkseen HTTP- ja TCP/IP-p
 
 Käyttöjärjestelmä, verkkokortin ajurit ja verkkokortin rauta piilottavat sisäänsä suuren osan tietoliikenteen monimutkaisuudesta. TCP/IP:n ylemmät kerrokset pysyvät muuttumattomina, oli varsinaisena siirtomedian protokollana Ethernet, Wireless Ethernet, PPP, MLPS tai muu. Vastaanottavan koneen päässä sama protokollapino suoritetaan päinvastaisessa järjestyksessä.
 
+Tässä yksinkertaisessa esimerkissä raspi.local tietokone sijaitsee kenties samassa lähiverkosa. Entä jos ei? Tällöin tarvitaan laitteita, jotka kytkevät useita verkkoja yhteen eli reitittimiä. Lue seuraava luku tätä varten.
 
-
-## Reititys
-
-![tcp_router_router_tcp](../images/tcp_router_router_tcp.svg)
-
-**Kuvio 2:** *Kahden tietokoneen välinen kommunikaatio reitittimien läpi. MAC-osoitteet lyhennetty 24-bittisiksi tiiviimmän ilmaisun toivossa.*
-
-!!! question "Tehtävä"
-    Yllä olevan esimerkin Raspberry Pi on kenties samassa verkossa asiakaskoneen kanssa, mutta entä jos ei ole? Katso yllä olevaa kuvaa ja pohdi, kuinka signaali kulkee verkosta toiseen. Tutustu vapaasti lähteisiin reitityksestä. Yksi suositeltu lähde on [Practical Networking: Networking Fundamentals](https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)-soittolista YouTubessa. Lesson 5 (Pt. I & II) käsittelee reititystä.
