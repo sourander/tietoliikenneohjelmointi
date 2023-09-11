@@ -56,7 +56,7 @@ Nyt, 2020-luvulla, unitaariset järjestelmät ovat ainakin tietokoneiden (ei-mik
 
 **Kuvio 1:** *Kaksi- ja kolmekerroksiset arkkitehtuurit rinnakkain. Case: HTTP.*
 
-Mikäli asiakas-palvelinmallin backendiä eli palvelinpäätyä pilkkoo pienempiin vastuualueisiin, syntyy n kappaletta tasoja. Tarkka toteutus voi olla monenlainen, mutta kerrokset ovat yksi toisensa päällä, joten kokonaisuus on monoliittinen. Huomaa, että monoliittinen ei ole synonyymi unitaariselle. Unitaarisella sovelluksella on merkitävän suuri riski koitua mutapalloksi; kerrostetulla mutapalloksi kertymistä voi estää siten, että tarpeiden monimutkaistuessa purkaa erillisiä kerroksia yhä pienemmiksi kerroksiksi/moduuleiksi.
+Mikäli asiakas-palvelinmallin fronttia tai bäkkiä pilkkoo pienempiin vastuualueisiin, syntyy `n` kappaletta tasoja. Tarkka toteutus voi olla monenlainen, mutta kerrokset ovat yksi toisensa päällä, joten kokonaisuus on monoliittinen. Huomaa, että monoliittinen ei ole synonyymi unitaariselle. Unitaarisella sovelluksella on merkitävän suuri riski koitua mutapalloksi; kerrostetulla mutapalloksi kertymistä voi estää siten, että tarpeiden monimutkaistuessa purkaa erillisiä kerroksia yhä pienemmiksi kerroksiksi/moduuleiksi.
 
 2-kerroksinen järjestelmä syntyy esimerkiksi siten, että datakerros on yksinkertainen Apache HTTP Server, tai verkkolevy, joka sisältää staattisen HTML-tiedoston`(index.html)`, joka viittaa tietokantamaisesti muihin saman palvelimen tiedostoihin `(meemi.gif, logo.gif, about.html)`.  Vaihtoehtoisesti datakerros voi olla jonkin sortin tietokanta, josta asiakkaan selaimessa pyörivä JavaScript-sovellus hakee dataa.
 
@@ -130,7 +130,7 @@ class Client():
 
 Tämän kurssin puitteissa kirjoitemme front end koodia (`HTML + CSS + JavaScript`) sekä back end koodia (esim. `Python`).  Alla (Kuvio 2) on esitetty yhdenlaista tapaa kuvata valmiin tuotoksen arkkitehtuuria yleisesti. Huomaa, että tällä karkealle tasolla kuvattu kaavio ei ota kantaa JavaScriptin ja Pythonin sisällä pyöriviin moduuleihin. Kyseessä on hyvin karkea yleiskuva komponenteista. Yhteen graafiin ei edes kannata ympätä kaikkea: on näppärämpää piirtää tarpeen mukaan toinen graafi alle.
 
-Arkkitehtuurin voi nähdä noudattavan yllä mainittua MVC-patternia, jos tulkitsee että HTML sekä CSS tiedostot View, joita Controller eli JavaScript-kirjasto päivittää, ja JavaScriptin-palikan sisällä on toteutettu muusta logiikasta eriytetty Model, joka käyttää REST-rajapintaa ikään kuin tietokantanaan.
+Arkkitehtuurin vasemman puolen, eli front endin, voi nähdä noudattavan yllä mainittua MVC-patternia, jos tulkitsee että HTML sekä CSS tiedostot View, joita Controller eli JavaScript-kirjasto päivittää, ja JavaScriptin-palikan sisällä on toteutettu muusta logiikasta eriytetty Model, joka käyttää REST-rajapintaa ikään kuin tietokantanaan. Myös graafin oikea puolisko, eli front end, voi noudattaa MVC:tä. Tästä on erillinen graafi alempana (Kuvio 3).
 
 !!! question "Tehtävä"
     Selvitä, mitä hyötyä on kerrostamisesta ja/tai modularisoinnista. Tämä saattaa olla jo OSI-tietomallin sekä yllä olevan tekstin perusteella arvattavissa tai pääteltävissä, mutta käy silti lukemassa aiheesta lisää.
@@ -139,7 +139,13 @@ Oli niin tai näin, eri nuolien välillä on keskenään kohtalaisen löyhä rii
 
 ![Example architecture](../images/example_architecture.svg)
 
-**Kuvio 2:** *Front ja back endistä koostuva WWW-sivu kaaviona. Looginen tietomalli on piirretty kuvan alle laatikkona; front endin sekä back endin pitää olla keskenään samaa mieltä siitä, mitä tietoa API:n läpi tulee ja missä formaatissa. Tämä on korostamassa, että `business domain` on laajempi käsite kuin yksi JavaScriptin sisällä oleva Model.* 
+**Kuvio 2:** *Front ja back endistä koostuva WWW-sivu kaaviona. Looginen tietomalli on piirretty kuvan alle laatikkona; front endin sekä back endin pitää olla keskenään samaa mieltä siitä, mitä tietoa API:n läpi tulee ja missä formaatissa. Tämä on korostamassa, että `business domain` on laajempi käsite kuin yksi JavaScriptin sisällä oleva Model. Sekä front että back joutuvat kuitenkin omalla kielellään määrittelemään tämän loogisen tietomallin toteutuksen esimerkikis `models/`-nimisen hakemiston tiedostoihin.*
+
+![example_architecture_backend](../images/example_architecture_backend.svg)
+
+**Kuvio 3:** *Ylemmän Kuvio 2:n oikea puolisko eli backend lähempää katseltuna. Musta vertikaalinen nuoli kuvastaa frontilta saapuvan kyselyn synnyttämien kutsujen kulkua tasojen läpi. Oranssit katkoviivat kuvastavat `from models import Thingy`-tyylisiä importteja. Sininen katkoviiva ja ympyrä ovat ORM.*
+
+Huomaa, että Kuvio 3:ssa näkyvän ORM:n (Object Relational Mapper) toiminallisuuden voi toteuttaa data adapterin sisään itse koodaamalla. ORM ei siis ole pakollinen. Se on lisätty graafiin, sillä se tulee merkittävän usein vastaan eri web frameworkien (esim. FastAPI) dokumentaatiossa ja esimerkeissä.
 
 
 

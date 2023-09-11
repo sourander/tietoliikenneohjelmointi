@@ -63,7 +63,7 @@ Lähiverkossa dominoivia datayhteyden standardeja:
 * Wireless Ethernet (IEEE 802.11)
 
 !!! question "Tehtävä"
-    Miksi ja miten voit striimata kuvaa Wifiin kytkeytyneestä kännykästä televisioon, joka on parikaapelilla kiinni siinä laitteessa, jota kutsut modeemiksi. Nehän ovat kahdessa eri lähiverkossa!
+    Miksi ja miten voit striimata kuvaa Wifiin kytkeytyneestä kännykästä televisioon, joka on parikaapelilla kiinni siinä laitteessa, jota kutsut modeemiksi. Nehän ovat kahdessa eri lähiverkossa! Vai ovatko?
 
 ??? info "Historiaa: Lähiverkko ilman hubia"
     Laneja järjestettiin jo aikoja ennen nykymuotoista Ethernetiä, jossa koneet yhdistetään parikaapeleilla hubiin, kytkimeen tai muuhun matolaatikkoon. Moninpelaaminen oli usein jopa *lokaalimpaa* kuin nykypäivän laneilla; Internet-yhteyttä ei usein, joten yksi lähiverkon koneista oli pelisession isäntäkone.
