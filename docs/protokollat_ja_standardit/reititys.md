@@ -1,12 +1,12 @@
-Mikäli IP-paketin kohteeksi merkattu IP-osoite ei ole lähettäjän kanssa samassa verkossa, tarvitaan reititin tai useita reittitimiä, joka tai jotka sitovat eri verkot yhteen. Lähettävä tietokone voi päätellä, onko kohdetietokone samassa verkossa katsomalla ip-osoitetta ja (ali)verkon peitettä. Katso alla olevaa Kuviota 2. Kuvitellaan, että kaikissa kuvion verkoissa aliverkon peite on 255.255.255.0. Kuvitellaan myös, että yksikään laite ei ole NAT:n takana. Jätetään myös TCP-portit huomioitta.
+Mikäli IP-paketin kohteeksi merkattu IP-osoite ei ole lähettäjän kanssa samassa verkossa, tarvitaan reititin tai useita reittitimiä, joka tai jotka sitovat eri verkot yhteen. Lähettävä tietokone voi päätellä, onko kohdetietokone samassa verkossa katsomalla ip-osoitetta ja (ali)verkon peitettä. Katso alla olevaa Kuviota 1. Kuvitellaan, että kaikissa kuvion verkoissa aliverkon peite on 255.255.255.0. Kuvitellaan myös, että yksikään laite ei ole NAT:n takana. Jätetään myös TCP-portit huomioitta.
 
 ![tcp_router_router_tcp](../images/tcp_router_router_tcp.svg)
 
-**Kuvio 2:** *Kahden tietokoneen välinen kommunikaatio reitittimien läpi, kuvitteellisen merikaapelin läpi. MAC-osoitteet lyhennetty 24-bittisiksi tiiviimmän ilmaisun toivossa. Kuvitellaan aliverkon peitteeksi kaikissa tapauksissa /24 eli 255.255.255.0*
+**Kuvio 1:** *Kahden tietokoneen välinen kommunikaatio reitittimien läpi, kuvitteellisen merikaapelin läpi. MAC-osoitteet lyhennetty 24-bittisiksi tiiviimmän ilmaisun toivossa. Kuvitellaan aliverkon peitteeksi kaikissa tapauksissa /24 eli 255.255.255.0*
 
-Asiakas `10.0.1.11` (Kuvio 2:ssa) haluaa lähettää HTTP-pyynnön palvelimelle `10.0.3.22`. Hän on ehkä saanut tämän osoitteen DNS-palvelimelta, tai ehkä se on rautakoodattu sovellukseen.
+Asiakas `10.0.1.11` (Kuvio 1:ssa) haluaa lähettää HTTP-pyynnön palvelimelle `10.0.3.22`. Hän on ehkä saanut tämän osoitteen DNS-palvelimelta, tai ehkä se on rautakoodattu sovellukseen.
 
-
+## Vaiheittain
 
 #### Vaihe 1
 
@@ -65,3 +65,29 @@ Palvelin saa viestin ja se kulkeutuu Ethernet ja TCP/IP-protokollaperheen kerros
 
 !!! question "Tehtävä"
     Yllä olevassa esimerkissä jätettiin NAT käsittelemättä, vaikka lähiverkon ip-osoite `10.x.x.x` vaihtui julkiverkon IP-osoitteeksi `1.x.x.x`. Mikäli NAT tosiaan olisi käytössä, kuinka Internet-tason headereihin, varsinkin `source IP`:hen, olisi kajottu ja missä vaiheissa?
+
+
+
+## Reititys todellisuudessa
+
+Yllä olevan kaltaisia esimerkkejä katsoessa on hyvä muistaa, että ne ovat Internetiin verrattuna huomattavan yksinkertaisia verkkoja. Internetin taustalla toimiva verkko, Internet Backbone, on hierarkinen. Kannattaa kerrata IP-osoitteiden materiaali: vanha luokkiin perustunut IP-jako on 90-luvulla korvattu CIDR:llä, jossa ARPA hallinnoi koko Internet-osoiteavaruutta, ja delegoi siitä osioita RIR:ille, jotka delegoivat siitä osia suurille ISP:lle tai teknologiayrityksille, jotka delevoivat osia pienemmille toimijoille, ja niin edelleen. Lopulta jokin paikallinen ISP liisaa sinulle yhden tai useamman julkiverkon IP-osoitteen. Jos tämän rungosta haarautuvan rakenteen piirtäisi paperille, siitä syntyisi puuta muistuttava haarautuva verkko.
+
+![Internet_map_1024](../images/Internet_map_1024.jpg)
+
+**Kuvio 2**: Osa internetistä kartoitettuna. Lähde: [The Opte Project - Originally from the English Wikipedia. CC BY 2.5](https://commons.wikimedia.org/w/index.php?curid=1538544). 
+
+Yllä olevassa esimerkissä on tarkoituksella rikottu CIDR-periaatetta, jossa verkko pilkotaan pienempiin aliverkkoihin. Sen sijaan Kuvion 1 oikeanpuolisen reitittin takaa löytyy oudosti verkko `10.0.3.0/24`, joka ei ole verkon `1.2.3.0/24` aliverkko. Mikäli Internet toimisi oikeasti näin, reitittimien pitäisi muistaa uskomaton määrä verkkoja. Tämän sijasta Internetin runkona on AS:iä (Autonomous System), jotka ovat valtavia verkkoja, ja nämä ovat ristiin rastiin toisiinsa kytköksissä. Jokaisella AS:llä on omat reitityskäytännöt, ja AS:t viestivät näistä keskenään protokollan BGP avulla (Border Gateway Protocol). Lue AS:istä lisää esimerkiksi täältä: [What is an autonomous system? | What are ASNs? | Cloudflare](https://www.cloudflare.com/learning/network-layer/what-is-an-autonomous-system/). BGP-protokollasta löytyy lisää tietoa samalta sivustolta: [What is BGP? | BGP routing explained | Cloudflare](https://www.cloudflare.com/learning/security/glossary/what-is-bgp/).
+
+![routing_through_as_systems](../images/routing_through_as_systems.svg)
+
+**Kuvio 3**: *Yllä olevaa dummy-esimerkkiä todenmukaisempi kuvaus paketin kulusta (vihreä viiva) Internetin AS-verkkojen läpi. Huomaa, että jokainen yksittäinen paketti voi ajautua kulkemaan omaa reittiään.*
+
+Lyhin reitti reitittimien läpi ratkaistaan, milläpä muulla kuin, protokollalla. Tämä protokolla on OSPF (Open Shortest Path First). Jotta mikään paketti ei jäisi pyörimään reittittimien väliin ikuiseen looppiin, jokainen paketti sisältää "hop countin", ja jokaisella paketilla on asetettuna maksimi hop count, jonka jälkeen se hylätään. Tämä toiminta noudattaa protkollaa RIP (Routing Information Protocol).
+
+![iana_rir_as_isp_dummy_architecture](../images/iana_rir_as_isp_dummy_architecture.png)
+
+**Kuvio 4**: *Kuvitteellinen Internet, jossa IANA:an kuuluu vain kaikki RIR:iä, joista RIR1:lle kuuluu kaikki IP-osoitteet `0.0.0.0`-`127.255.255.255` ja RIR2:lle kaikki osoitteet `128.0.0.0` alkaen.* 
+
+Emme tiedä, kuinka moneen aliverkon aliverkkoon (Kuvion 4) RIR1:een kuuluva AS1 on pilkottu. Meidän, kuten ei myöskään AS2:n reitttimen, ei tarvitse tietää tätä. AS1:n reittimet voivat hyvin ilmoittaa: *"Täältä löytyvät kaikki verkot 1.x.x.x"*. Näin AS2:n reititystaulun ei tarvitse sisältää jokaista aliverkkoa AS1:ssä, vaan sille riittää karkeimmalle mahdolliselle tasolle aggregoitu verkko-osoite: AS2:n reittitimet osaavat kyllä viedä paketin IP-osoitteen perusteella oikeaan aliverkkoon. Huomaathan, että Kuvion 4 esimerkissä AS:t on yksinkertaistettu siten, että niillä on vain yksi reititin.
+
+Se, mikä pysyy vakiona esimerkin monimutkaisuudesta riippumatta, on että
