@@ -18,7 +18,7 @@ Tietokoneohjelmia voi luonnollisesti kirjoittaa useilla eri ohjelmointikielillä
 | Vue.js       |   11758   |            6804             |        58        |
 
 !!! question "Tehtävä"
-Tutustu pintapuoleisesti ainakin yllä olevien sovellusten Top 5:een. Millä kielellä framework on toteutettu? Onko kyseessä palvelin- vai asiakaspuolen framework? Käy tutustumassa ja vertaamassa tätä W3Techs-sivuston kyselytuloksiin [palvelinpuolen ohjelmistokielistä](https://w3techs.com/technologies/overview/programming_language) sekä [asiakaspuolen ohjelmistokielistä](https://w3techs.com/technologies/overview/client_side_language) sekä [asiakaspuolen JavaScript-kirjastoista](https://w3techs.com/technologies/overview/javascript_library).
+    Tutustu pintapuoleisesti ainakin yllä olevien sovellusten Top 5:een. Millä kielellä framework on toteutettu? Onko kyseessä palvelin- vai asiakaspuolen framework? Käy tutustumassa ja vertaamassa tätä W3Techs-sivuston kyselytuloksiin [palvelinpuolen ohjelmistokielistä](https://w3techs.com/technologies/overview/programming_language) sekä [asiakaspuolen ohjelmistokielistä](https://w3techs.com/technologies/overview/client_side_language) sekä [asiakaspuolen JavaScript-kirjastoista](https://w3techs.com/technologies/overview/javascript_library).
 
 ## Muta- ja pastavertaukset
 
@@ -118,7 +118,7 @@ Tämän kurssin puitteissa kirjoitemme front end koodia (`HTML + CSS + JavaScrip
 Arkkitehtuurin vasemman puolen, eli front endin, voi nähdä noudattavan yllä mainittua MVC-patternia, jos tulkitsee että HTML sekä CSS tiedostot View, joita Controller eli JavaScript-kirjasto päivittää, ja JavaScriptin-palikan sisällä on toteutettu muusta logiikasta eriytetty Model, joka käyttää REST-rajapintaa ikään kuin tietokantanaan. Myös graafin oikea puolisko, eli front end, voi noudattaa MVC:tä. Tästä on erillinen graafi alempana (Kuvio 3).
 
 !!! question "Tehtävä"
-Selvitä, mitä hyötyä on kerrostamisesta ja/tai modularisoinnista. Tämä saattaa olla jo OSI-tietomallin sekä yllä olevan tekstin perusteella arvattavissa tai pääteltävissä, mutta käy silti lukemassa aiheesta lisää.
+    Selvitä, mitä hyötyä on kerrostamisesta ja/tai modularisoinnista. Tämä saattaa olla jo OSI-tietomallin sekä yllä olevan tekstin perusteella arvattavissa tai pääteltävissä, mutta käy silti lukemassa aiheesta lisää.
 
 Oli niin tai näin, eri nuolien välillä on keskenään kohtalaisen löyhä riippuvuus, varsinkaan kauemmas kuin yhden nuolen päähän. On täysin mahdollista vaihtaa Pythonilla koodattu back end vaikkapa Go:lla koodattuun back endiin. Sivuston toimivuus ei muutu. Koko REST API:n voi vaihtaa esimerkiksi Google Protobuffiin; tällöin JavaScriptin Model-päätyyn tulee tehdä muutoksia, koska `JS <--> Python`-rajapinta on muuttunut, mutta tämä ei aiheuta muutoksia HTML- tai CSS-tiedostoihin tai Controlleri-osion logiikkaan.
 
@@ -144,7 +144,7 @@ Entäpä tilanne, jossa arkkitehtuuri ei koostukaan kerroksista? Mitä jos se ko
 Huomaa, että nämä eivät ole huonompia tai parempi kuin kerroksista koostuvat arkkitehtuurit. Järjestelmälle asetetut vaatimukset ja järjestelmän monimutkaisuus määrittelevät, mikä arkkitehtuuri sopii millekin. Lopulta universaalia totuutta ei välttämättä edes ole, vaan arkkitehdin on pakko valita jotakin. Myöhemmin arkkitehtuuria voi refaktoroida, mutta se voi olla merkittävän kallista työmäärällisesti.
 
 !!! question "Tehtävä"
-Lue lisää siitä, kuinka perinteinen Web 1.0:sta kehittyi eventtipohjaisten arkkitehtuurien koti: [A Technical Deep Dive on Event Driven Architectures](https://blog.quastor.org/p/tech-dive-event-driven-architectures-a55d)
+    Lue lisää siitä, kuinka perinteinen Web 1.0:sta kehittyi eventtipohjaisten arkkitehtuurien koti: [A Technical Deep Dive on Event Driven Architectures](https://blog.quastor.org/p/tech-dive-event-driven-architectures-a55d)
 
 !!! question "Tehtävä"
-Lue lisää siitä, ovatko monoliitit aina pahasta: [Death by a Thousand Microservices](https://renegadeotter.com/2023/09/10/death-by-a-thousand-microservices.html)
+    Lue lisää siitä, ovatko monoliitit aina pahasta: [Death by a Thousand Microservices](https://renegadeotter.com/2023/09/10/death-by-a-thousand-microservices.html)
