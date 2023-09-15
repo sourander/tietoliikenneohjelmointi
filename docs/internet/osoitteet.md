@@ -96,20 +96,21 @@ graph LR
 
 Palvelimille ja nimenomaan tietyille palvelimien käyttämille applikaatio-tason protokollille on varattu omat portit. Tarkka lista löytyy [IANA:n sivuilta](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml), tai hieman helpommin luettavassa muodossa [Wikipediasta](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers). Käy kurkkaamassa mitkä protokollat tunnistat.
 
-
 !!! question "Tehtävä"
     Verkkoselain täydentää oletusportin protokollan mukaan (HTTP=80, HTTPS=443), mutta kukaan ei estä kirjoittamasta sitä itse osoitteen perään. Kokeile kirjoittaa seuraavat osoitteet osoitekenttään, ja seuraa mitä tapahtuu: `http://www.example.com:80/` ja `https://www.example.com:443/`. 
 
-??? tip
-    Yhteys on nimenomaan applikaation välillä, joten sekä asiakassovellukset että palvelinsovellus voivat toimia samalla tietokoneella. Tätä varten on erikseen varattu IP-osoiteavaruus 127.0.0.0, josta useimmiten käytetään vain yhtä loopback-osoitetta 127.0.0.1 (alias `localhost`).
 
-    ```mermaid
-    graph LR
-    c1["Tietokone 1( 192.168.0.1)"]
-    
-    c1 -->|192.168.0.1:51111 => 127.0.01:80| c1
-    c1 -->|192.168.0.1:55555 => 127.0.01:80| c1
-    ```
+
+Yhteys on nimenomaan applikaation välillä, joten sekä asiakassovellukset että palvelinsovellus voivat toimia samalla tietokoneella. Tätä varten on erikseen varattu IP-osoiteavaruus 127.0.0.0, josta useimmiten käytetään vain yhtä loopback-osoitetta 127.0.0.1 (alias `localhost`). Tämä mahdollistaa sen, että ajat omalla tietokoneellasi (esim. `192.168.0.123`) http-palvelinta, ja otat siihen yhteyden Chromella.
+
+```mermaid
+graph LR
+c1["Tietokone 1( 192.168.0.123)"]
+
+c1 -->|192.168.0.1:51111 => 127.0.01:80| c1
+c1 -->|192.168.0.1:55555 => 127.0.01:80| c1
+
+```
 
 ## IP-osoitteiden luokittelu
 
