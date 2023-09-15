@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "doc-skeleton"
+name = "tietoliikenneohjelmointi"
 version = "0.1.0"
 description = ""
 authors = ["Jani Sourander <sourander@gmail.com>"]
