@@ -25,16 +25,21 @@ XA-XX-XX-XX-XX-XX
 !!! question
 	Yllä olevassa ASCII-esimerkissä on kaksi lyhennettä: OUI ja NIC. Ensimmäinen on valmistajan tai omistajan suhteen uniikki prefix (Organisationally Unique Identifier), jälkimmäinen on NIC:n eli verkkortin eli yksittäisen laitteen suhteen uniikki. Kokeile tätä käytännössä! Aja jokin alla olevista käskyistä käyttöjärjestelmäsi mukaan, etsi haluamasi laitteen MAC-osoite, ja käy syöttämässä ensimmäiset kolme oktettia (`XX-XX-XX`) [Miniwebtoolin MAC Address Lookuppiin](https://miniwebtool.com/mac-address-lookup/).
 
-    ```
-    # Windows komentokehote
-    ipconfig \all
-    
-    # Linux bash
-    ip -o link | awk '$2 != "lo:" {print $2, $(NF-2)}'
-    
-    # PowerShell
-    Get-NetAdapter -IncludeHidden | Select Name, MacAddress
-    ```
+~~~bash
+```
+# Windows komentokehote
+ipconfig \all
+
+# Linux bash
+ip -o link | awk '$2 != "lo:" {print $2, $(NF-2)}'
+
+# PowerShell
+Get-NetAdapter -IncludeHidden | Select Name, MacAddress
+
+# macOS
+networksetup -listallhardwareports
+```
+~~~
 
 ### Looginen osoite
 
@@ -49,16 +54,24 @@ Jotta TCP/IP-protokollan käyttö olisi mahdollista, verkkokortille on täytynyt
 !!! question
     Selvitä sinun IPv4-osoitteesi on lähiverkossa. Tämä onnistuu komennoilla:
 
-    ```
-    # Windows komentokehote
-    ipconfig
-    
-    # Linux bash
-    ip -4 addr show
-    
-    # PowerShell
-    Get-NetIPAddress -AddressFamily IPv4 | Select-Object InterfaceAlias, IPAddress
-    ```
+~~~bash
+```
+# Windows komentokehote
+ipconfig
+
+# Linux bash
+ip -4 addr show
+
+# PowerShell
+Get-NetIPAddress -AddressFamily IPv4 | Select-Object InterfaceAlias, IPAddress
+
+# macOS
+networksetup -listallnetworkservices # Listaa ja hae infot (1)
+networksetup -getinfo "Wi-Fi"
+```
+~~~
+
+1. Yksi tapa macOS:llä on ensin listata ylemmällä komennolla kaikki network servicet, ja sitten yksi kerrallaan kutsua `-getinfo "Name of the Service"`.
 
 !!! question "Tehtävä"
     Tutustu IPv6:een. Miten se eroaa IPv4:stä?
@@ -93,7 +106,7 @@ Palvelimille ja nimenomaan tietyille palvelimien käyttämille applikaatio-tason
     ```mermaid
     graph LR
     c1["Tietokone 1( 192.168.0.1)"]
-
+    
     c1 -->|192.168.0.1:51111 => 127.0.01:80| c1
     c1 -->|192.168.0.1:55555 => 127.0.01:80| c1
     ```
