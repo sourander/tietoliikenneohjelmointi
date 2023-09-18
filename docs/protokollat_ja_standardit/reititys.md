@@ -78,7 +78,7 @@ Yllä olevan kaltaisia esimerkkejä katsoessa on hyvä muistaa, että ne ovat In
 
 Yllä olevassa esimerkissä on tarkoituksella rikottu CIDR-periaatetta, jossa verkko pilkotaan pienempiin aliverkkoihin. Sen sijaan Kuvion 1 oikeanpuolisen reitittin takaa löytyy oudosti verkko `10.0.3.0/24`, joka ei ole verkon `1.2.3.0/24` aliverkko. Mikäli Internet toimisi oikeasti näin, reitittimien pitäisi muistaa uskomaton määrä verkkoja. Tämän sijasta Internetin runkona on AS:iä (Autonomous System), jotka ovat valtavia verkkoja, ja nämä ovat ristiin rastiin toisiinsa kytköksissä. Jokaisella AS:llä on omat reitityskäytännöt, ja AS:t viestivät näistä keskenään protokollan BGP avulla (Border Gateway Protocol). Lue AS:istä lisää esimerkiksi täältä: [What is an autonomous system? | What are ASNs? | Cloudflare](https://www.cloudflare.com/learning/network-layer/what-is-an-autonomous-system/). BGP-protokollasta löytyy lisää tietoa samalta sivustolta: [What is BGP? | BGP routing explained | Cloudflare](https://www.cloudflare.com/learning/security/glossary/what-is-bgp/).
 
-![routing_through_as_systems](../images/routing_through_as_systems.svg)
+![routing_through_as_systems](../images/routing_through_as_systems.png)
 
 **Kuvio 3**: *Yllä olevaa dummy-esimerkkiä todenmukaisempi kuvaus paketin kulusta (vihreä viiva) Internetin AS-verkkojen läpi. Huomaa, että jokainen yksittäinen paketti voi ajautua kulkemaan omaa reittiään.*
 
