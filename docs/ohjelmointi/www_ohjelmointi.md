@@ -59,7 +59,7 @@ Tämän kurssin yhteydessä ei ole tarvetta käyttää aikaa pohtimiseen, että 
 Yksi ilmentymä 3-kerroksisesta arkkitehtuurista on Model-View-Controller (MVC) pattern eli sapluuna. MVC:stä löytää helposti jopa aika kärkästäkin debatointia niin Stack Overflowsta, Redditistä kuin blogeiltakin. Tämän kurssin puitteissa riittää tietää, että 1990 luvun alussa Internet oli spagettikoodista koostuva kaaos, ja MVC oli yksi ratkaisu siihen, ja MVC perustuu itseään reilusti vanhempaan 3-kerrosarkkitehtuuriin. Lisäksi MVC:n perustermit on hyvä ymmärtää.
 
 !!! question "Tehtävä"
-Etsi keskustelua, kommentointia tai väittelyä siitä, mikä MVC on tai ei ole. Voit kokeilla myös ChatGPT:tä, Bardia tai muuta LLM:ää.
+    Etsi keskustelua, kommentointia tai väittelyä siitä, mikä MVC on tai ei ole. Voit kokeilla myös ChatGPT:tä, Bardia tai muuta LLM:ää.
 
 Komponenttien Model, View ja Controller tehtävät ovat seuraavat:
 
@@ -115,16 +115,17 @@ class Client():
 
 Tämän kurssin puitteissa kirjoitemme front end koodia (`HTML + CSS + JavaScript`) sekä back end koodia (esim. `Python`). Alla (Kuvio 2) on esitetty yhdenlaista tapaa kuvata valmiin tuotoksen arkkitehtuuria yleisesti. Huomaa, että tällä karkealle tasolla kuvattu kaavio ei ota kantaa JavaScriptin ja Pythonin sisällä pyöriviin moduuleihin. Kyseessä on hyvin karkea yleiskuva komponenteista. Yhteen graafiin ei edes kannata ympätä kaikkea: on näppärämpää piirtää tarpeen mukaan toinen graafi alle.
 
-Arkkitehtuurin vasemman puolen, eli front endin, voi nähdä noudattavan yllä mainittua MVC-patternia, jos tulkitsee että HTML sekä CSS tiedostot View, joita Controller eli JavaScript-kirjasto päivittää, ja JavaScriptin-palikan sisällä on toteutettu muusta logiikasta eriytetty Model, joka käyttää REST-rajapintaa ikään kuin tietokantanaan. Myös graafin oikea puolisko, eli front end, voi noudattaa MVC:tä. Tästä on erillinen graafi alempana (Kuvio 3).
+1. Arkkitehtuurin vasen puoli, front end, voi noudattaa MVC:tä.
+2. Arkkitehtuurin oikea puoli, back end, voi noudattaa MVC:tä. Tästä on erillinen graafi alempana (Kuvio 3).
 
 !!! question "Tehtävä"
     Selvitä, mitä hyötyä on kerrostamisesta ja/tai modularisoinnista. Tämä saattaa olla jo OSI-tietomallin sekä yllä olevan tekstin perusteella arvattavissa tai pääteltävissä, mutta käy silti lukemassa aiheesta lisää.
 
-Oli niin tai näin, eri nuolien välillä on keskenään kohtalaisen löyhä riippuvuus, varsinkaan kauemmas kuin yhden nuolen päähän. On täysin mahdollista vaihtaa Pythonilla koodattu back end vaikkapa Go:lla koodattuun back endiin. Sivuston toimivuus ei muutu. Koko REST API:n voi vaihtaa esimerkiksi Google Protobuffiin; tällöin JavaScriptin Model-päätyyn tulee tehdä muutoksia, koska `JS <--> Python`-rajapinta on muuttunut, mutta tämä ei aiheuta muutoksia HTML- tai CSS-tiedostoihin tai Controlleri-osion logiikkaan.
+Kerrostetussa arkkitehtuurissa eri nuolien välillä on riippuvuus. Tämä riippuvuus on rajapinta eli interface, jota kummankin tulee noudattaa. Kunhan rajapinta pysyy samana, laatikon sisältöä voi muokata mielin määrin. Esimerkiksi front endin ja back endin välillä rajapintana on REST API, joka käyttää tavallisia HTTP-käskyjä. On täysin mahdollista vaihtaa Pythonilla koodattu back end vaikkapa Go:lla koodattuun back endiin. Sivuston toimivuus ei muutu. Koko REST API:n voi vaihtaa esimerkiksi Google Protobuffiin; tällöin JavaScriptin Model-päätyyn tulee tehdä muutoksia, koska `JS <--> Python`-rajapinta on vaihtunut REST API:sta Protobuffiin. Huomaathan, että tämä ei aiheuta muutoksia HTML- tai CSS-tiedostoihin tai Controlleri-osion logiikkaan. Kerrostamisen avulla ohjelmistoa voi siis modularisoida pieniin laatikoihin ja niiden välisiin rajapintoihin.
 
 ![Example architecture](../images/example_architecture.svg)
 
-**Kuvio 2:** _Front ja back endistä koostuva WWW-sivu kaaviona. Looginen tietomalli on piirretty kuvan alle laatikkona; front endin sekä back endin pitää olla keskenään samaa mieltä siitä, mitä tietoa API:n läpi tulee ja missä formaatissa. Tämä on korostamassa, että `business domain` on laajempi käsite kuin yksi JavaScriptin sisällä oleva Model. Sekä front että back joutuvat kuitenkin omalla kielellään määrittelemään tämän loogisen tietomallin toteutuksen esimerkikis `models/`-nimisen hakemiston tiedostoihin._
+**Kuvio 2:** _Front ja back endistä koostuva WWW-sivu kaaviona. Looginen tietomalli on piirretty kuvan alle laatikkona; front endin sekä back endin pitää olla keskenään samaa mieltä siitä, mitä tietoa API:n läpi tulee ja missä formaatissa. Tämä on korostamassa, että `business domain` on laajempi käsite kuin yksi JavaScriptin tai Pythonin sisällä oleva Model. Sekä front että back joutuvat kuitenkin omalla kielellään määrittelemään tämän loogisen tietomallin toteutuksen esimerkiksi `models/`-nimisen hakemiston tiedostoihin._
 
 ![example_architecture_backend](../images/example_architecture_backend.svg)
 
