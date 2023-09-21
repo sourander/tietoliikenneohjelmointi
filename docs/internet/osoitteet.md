@@ -204,7 +204,13 @@ Mikäli Yritys X:n tarvitsee myöhemmin muuttaa aliverkkojen jakoja, sen tarvits
 
 Mikäli ymmärsit yllä esitellyt IP-osoiteluokat sekä aliverkot, on helppo ymmärtää kuinka osoiteluokista on luovuttu: koko Internetistä on tehty osoiteluokaton. Ylätasolla on organisaatio, joka jakaa alemman tason organisaatioilla osoite-avaruudesta palasia. Nämä organisaatiot taas jakavat omaa verkkoon aliverkoiksi ja myydän asiakkailleen. Mitä nämä organisaatiot ovat? Se selviää [organisaatioita käsittelevässä luvussa](../protokollat_ja_standardit/organisaatiot.md) tarkemmin, mutta komentoketju on esimerkiksi: IANA => RIPE NCC => Kaisanet. Kattojärjestön eli IANA:n jakamat IP-osoitealueet löytyvät [heidän sivuiltaan](https://www.iana.org/assignments/ipv4-address-space/ipv4-address-space.xhtml). Kaisanet voi myydä omistamistaan CIDR-verkoista asiakkailleen osoitteita.
 
-Yksittäisen julkisen IP-osoitteen blokin saa tietää bash-komennolla: `whois -rBG -T route $SINUN_OMA_IP` (vaatii että whois on asennettuna). Komennosta voi paljastua esimerkiksi, että käyttämäsi yhteyden route on `77.223.32.0/19`, ja tämä kuuluu AS:ään `AS13170`, josta voi penkoa lisää tietoa esimerkiksi [bgp.tools-sivustolta](https://bgp.tools/as/13170). Mikäli klikkailet sivuston linkkejä, tulet löytämään upstream-suuntaisia reitittimiä (tai verkkoja), jotka ovat tavallista ISP:tä, kuten Kaisanetiä, paljon suurempia. Näitä ovat Tier-1 Networkit, jotka muodostavat Internetin backbonen, ja niitä operoivat muiden muassa AT&T, Verizon ja Lumen. Internetin verkotus on onneksi käyttäjän näkökulmasta hyvin abstrahoitu, joten Internetin "rungon" reitityksistä ei tarvitse tietää juuri tämän enempää.
+Yksittäisen julkisen IP-osoitteen blokin saa tietää alla olevalla bash-komennolla, olettaen että whois-ohjelma on sinulla asennettuna. Selvitä sinun oma julkinen ip-osoitteesi **googlettamalla "what is my ip"**.
+
+```bash
+whois x.x.x.x # Täytä esimerkiksi oma julkinen ip-osoitteesi
+```
+
+Komennosta voi paljastua esimerkiksi, että käyttämäsi yhteyden route on `77.223.32.0/19`, ja tämä kuuluu AS:ään `AS13170`, josta voi penkoa lisää tietoa esimerkiksi [bgp.tools-sivustolta](https://bgp.tools/as/13170). Mikäli klikkailet sivuston linkkejä, tulet löytämään upstream-suuntaisia reitittimiä (tai verkkoja), jotka ovat tavallista ISP:tä, kuten Kaisanetiä, paljon suurempia. Näitä ovat Tier-1 Networkit, jotka muodostavat Internetin backbonen, ja niitä operoivat muiden muassa AT&T, Verizon ja Lumen. Internetin verkotus on onneksi käyttäjän näkökulmasta hyvin abstrahoitu, joten Internetin "rungon" reitityksistä ei tarvitse tietää juuri tämän enempää.
 
 
 ## CIDR-taulukko
@@ -231,7 +237,7 @@ Privaatit verkot ovat sellaisia ip-osoiteavaruuksia, joita ei ole tarkoitettu ky
 | 10.0.0.0/8         | 10.0.0.0 - 10.255.255.255       |    A     |
 | 172.16.0.0/16      | 172.16.0.0 - 172.16.255.255     |    B     |
 | ...                | ... yhteensä 16 B:tä ...        |    B     |
-| 172.17.0.0/16      | 172.17.0.0 - 172.17.255.255     |    B     |
+| 172.17.0.0/16      | 172.31.0.0 - 172.31.255.255     |    B     |
 | 192.168.0.0/24     | 192.168.0.0 - 192.168.0.255     |    C     |
 | ...                | ... yhteensä 256 C:tä ...       |    C     |
 | 192.168.255.255/24 | 192.168.255.0 - 192.168.255.255 |    C     |
@@ -241,8 +247,8 @@ Huomaa, että voit jakaa ne myös CIDR-tyylisesti muusta kohtaa poikki kuin ABC-
 | Aliverkon peite | CIDR           | IP-osoiteavaruus            |
 | --------------- | -------------- | --------------------------- |
 | 255.0.0.0       | 10.0.0.0/8     | 10.0.0.0-10.255.255.255     |
-| 255.255.240.0   | 172.16.0.0/12  | 172.16.0.0-172.32.255.255   |
-| 255.255.240.0   | 192.168.0.0/16 | 192.168.0.0-192.168.255.255 |
+| 255.240.0.0     | 172.16.0.0/12  | 172.16.0.0-172.31.255.255   |
+| 255.255.0.0     | 192.168.0.0/16 | 192.168.0.0-192.168.255.255 |
 
 !!! question "Tehtävä"
     Löydätkö yllä olevasta listasta verkon, johon oman tietokoneesi lähiverkon IP kuuluu? Jos et, sinulla ei kenties ole NAT-ominaisuus päällä reitittimessä. Jos tämä ei ole tarkoituksella, kannattaa kysäistä neuvoa kurssikavereilta tai tutustua reititin-modeemin käyttöoppaaseen. NAT esitellään seuraavassa luvussa.
