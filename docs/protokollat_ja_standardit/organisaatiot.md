@@ -24,8 +24,8 @@ Institute of Electrical and Electronics Engineers (IEEE) on kansainvälinen tekn
 Computer Networks -kirjan kirjoittaja tiivistää suurten standardiorganisaatioiden ja Internet-standardeja kehittävien vapaaehtoisjärjestöjen eroa alla olevan lainauksen tavoin, kenties hieman huumorimielessä.
 
 !!! quote
-	The difference can be crudely summed up by saying that the people who come to ITU or ISO standardization 
-meetings wear suits, while the people who come to Internet standardization meetings wear jeans. -- Andrew Tanenbaum
+    The difference can be crudely summed up by saying that the people who come to ITU or ISO standardization 
+    meetings wear suits, while the people who come to Internet standardization meetings wear jeans. -- Andrew Tanenbaum
 
 Internet Engineering Task Force (IETF) kehittää muiden muassa Internet-standardeja, joista yksi on TPC/IP eli Internet Protocol Suite. IETF:n teknisiä dokumenttejä kutsutaan Request for Comments (RFC) -nimellä. Näihin lyhenteisiin on vaikea olla törmäämättä verkkoihin liittyvää dokumentaatiota ja kirjallisuutta lukiessa. Muutamia merkittäviä ovat Internet Protocol eli IPv4-protokolla (RFC 791), IPv6 (RFC 2460), TCP (RFC 793), UDP (RFC 768) ja HTTP/1.1 (RFC 9112).  Toisin kuin ISO:n standardit, joihin saa pääsyn luottokorttia näyttämällä, nämä ovat kaikki saatavilla ilmaiseksi - mistäpä muualta kuin - Internetistä.
 
