@@ -105,6 +105,7 @@ http -f POST https://jsonplaceholder.typicode.com/posts street="Taito 1"
 Valtaosa mielenkiintoisesta datasta on yrit4yksille tärkeää, strategista salaisuutta, mutta myös avoimesti käytettävää dataa on saatavilla. Luethan datan lisenssin tai käyttöehdot tapauskohtaisesti.
 
 * [Rautatieliikenne | Digitraffic - Fintraffic](https://www.digitraffic.fi/rautatieliikenne/)
+* [Tieliikenne | Digitraffic - Fintraffic](https://www.digitraffic.fi/tieliikenne/)
 * [Avoin data | Tieto Traficom](https://tieto.traficom.fi/fi/tietotraficom/avoin-data?toggle=Kyberturvallisuus)
 * [Avoin data - Ilmatieteen laitos](https://www.ilmatieteenlaitos.fi/avoin-data)
 * Lisäksi [avoindata.fi](https://www.avoindata.fi/data/fi/apiset)-sivusto sisältää useiden eri lähteiden rajapintoja koostetusti yhdessä paikassa.

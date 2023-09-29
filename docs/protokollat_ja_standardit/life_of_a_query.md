@@ -87,3 +87,12 @@ Käyttöjärjestelmä, verkkokortin ajurit ja verkkokortin rauta piilottavat sis
 
 Tässä yksinkertaisessa esimerkissä raspi.local tietokone sijaitsee kenties samassa lähiverkosa. Entä jos ei? Tällöin tarvitaan laitteita, jotka kytkevät useita verkkoja yhteen eli reitittimiä. Lue seuraava luku tätä varten.
 
+
+## Wireshark
+
+Huomaa, että voit analysoida yllä tapahtuvaa liikennettä Wireshark-ohjelman avulla. Mikäli liikenne tapahtuu kokonaan kotikoneesi sisällä, kaappaa ja analysoi `loopback`-nimistä network interfacea. Mikäli liikenne kohdentuu kotikoneesi ulkopuolelle, joko lähiverkkoon tai Internetiin, kaappaa ja analysoi käyttämäsi verkkosovittimen liikennettä. Jos et ole ennen käyttänyt Wiresharkia, tutustu ohjevideoihin. Niitä löytyy Youtubesta reilusti, kuten [Chris Greerin Wireshark Masterclass](https://www.youtube.com/watch?v=OU-A2EmVrKQ&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ&index=1). Peruskäyttöä varten riittää, että katsot soittolistan pari ensimmäistä videota.
+
+Mikäli seuraat interfacea, joka **ei ole loopback**, on suositeltavaa:
+
+1. Sulje kaikki Internetiä käyttävät ohjelmat, joita et tarvitse.
+2. Luo [Capture Filter](https://wiki.wireshark.org/CaptureFilters), joka rajaa pakettien tallennuksen sinun use caseen, jos mahdollista. Aina se ei ole.
