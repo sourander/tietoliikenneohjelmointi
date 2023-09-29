@@ -2,7 +2,49 @@ HTTP on protokolla, jota käytetään välittämään muun muassa HTML-sivuja. H
 
 ## Teoria
 
-TODO
+On tärkeää tiedostaa, että Internet ja World Wide Web eivät ole sama asia. Internet on se valtava verkko, johon on kytkeytynyt useita eri verkkoja (eng. interconnected networks, internetworks). World Wide Web eli WWW on järjestelmä, joka mahdollistaa dokumenttien jakamisen Internetissä, ja se käyttää kommunikaatioon protokollaa nimeltään HTTP (Hypertext Transfer Protocol). HTTP on siis protokolla eli käytäntö, jota web-selaimet kuten Chrome käyttävät pyytäessään HTML-dokumentteja tai muita Webiin kuuluvia dokumentteja ja tiedostoja. Alkuperäinen HTTP on salaamatonta tietoa, joten kuka tahansa välikäsi voi lukea viestin sisällön. Nykyisin tyypilisimmin nettisivut käyttävät HTTP:ää, josta voit lukea seuraavasta luvusta lisää.
+
+Hypertext Transfer Protocol siirtää siis paljon muutakin kuin varsinaista Hypertextiä kuten HTML-dokumentteja. Samaa protokollaa käytetään myös muiden assettien, kuten kuvien ja JavaScript-tiedostojen, hakemiseen. Sana *hakeminen* on tärkeä. HTTP on hyvin yksinkertaisiin **kyselyihin** ja **vastauksiin** (eng. request and response) perustuva protokolla.
+
+HTTP:n on luonut Tim Berners-Lee ja järjestelmä sai alkunsa 1989. Tällöin Berners-Lee työskenteli CERN:llä. Mikäli historia kiinnostaa tarkemmin, tähän voi tutustua W3C:n [A Little History of the World Wide Web](https://www.w3.org/History.html)-aikajanalla, joka sisältää muun muassa linkin alkuperäiseen webin aloittaneeseen dokumenttiin "Information Management: A Proposal". Ensimmäinen ikinä käytössä ollut HTTP-protokolla oli versioltaan HTTP/0.9. Kysely oli tasan yhden rivin pitkä, esimerkiksi `GET /page.html\r\n`. Muita verbejä kuin GET ei ollut määritelty vielä. Vastaus ei sisältänyt mitään metadataa vaan pelkän sivun. Katso Mozillan [Evolution of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP#http0.9_%E2%80%93_the_one-line_protocol) sivulta esimerkki kutsusta ja palautuvasta sivusta.
+
+| Versio   | Spesifikaation vuosi                               |
+| -------- | -------------------------------------------------- |
+| HTTP/0.9 | 1991                                               |
+| HTTP/1.0 | 1996                                               |
+| HTTP/1.1 | 1994                                               |
+| HTTP/2   | 2015                                               |
+| HTTP/3   | [TBA](https://www.rfc-editor.org/rfc/rfc9114.html) |
+
+HTTP/1.0 lisäsi standardiin verbit HAED ja POST, versionumeron, HTTP headerit (esim. `Accept: text/html`), sekä statuskoodit – ja ylipäätänsä palautuvaan viestiin muutakin sisältöä kuin itse dokumentin. Samalla lisättiin tuki myös muun materiaalin kuin `text/html`:n siirtämiseen.
+
+!!! warning
+    HTML-dokumentteihin oli siis jatkossa mahdollista upottaa GIF-kuvia tai -animaatioita. Näistä suorastaan pärisevän kuuluisa oli Ally McBealissäkin vilahtanut [Dancing Baby GIF](https://en.wikipedia.org/wiki/Dancing_baby).
+
+!!! question "Tehtävä"
+    Etsi 1990-luvun puolivälin verkkosivustoja jostakin Internetin arkistointipalvelusta. Esimerkkinä [Hakupalvelu www.fi](https://web.archive.org/web/19961104154439/http://www.fi/) vuodelta 1996.
+
+HTTP/1.1 julkaistiin vain muutamaa kuukausi HTTP/1.0:n jälkeen. Se lisäsi muutaman ominaisuuden, jotka näin jälkikäteen saattavat tuntua jopa itsestäänselviltä. Näistä ehkä merkittävimmät ovat:
+
+* Host-headerista (`Host: example.com`) tuli pakollinen. Tämä mahdollisti sen, että yhden ja saman ip-osoitteen palvelin palvelee usean eri domainin verkkosivua.
+* Yhteyden voi jättää päälle (`Connection: Keep-Alive`), jolloin jokaista pyyntöä varten ei tarvitse luoda uutta yhteyttä.
+* Pyyntöjen liukuhihnoittaminen (eng. pipelining) lisättiin, jolloin asiakas voi lähettää uusia `GET`-pyyntöjä, vaikka edellisen käsittely olisi yhä kesken. Tämä nopeuttaa latausta sivuissa, joissa on suuri määrä eri dokumentteja (CSS, JavaScript, kuvia...).
+* Sisällön kieleen ja merkistöön liittyvä metadatalle asetettiin muoto ja paikka (esim. `charset= utf-8`).
+
+HTTP/1.1 ei levännyt täysin staattisesti laakereillaan, vaan siihen on lisätty vuosien varrella toiminnallisuuksia, joista osa voidaan luokitella omiksi protokollikseen, kuten WebSocket ja HTTPS.
+
+Yllä mainittiin statuskoodit. Ne tulevat palvelinta kokeillessa tutuksi. Alla kuitenkin muutama statuskoodi, joihin todennäköisesti törmäät jo tämän kurssin aikana:
+
+| Statuskoodin kategoria | Esimerkki                                                    |
+| ---------------------- | ------------------------------------------------------------ |
+| 2xx                    | **200** (OK). Pyyntöön vastattu onnistuneesti.               |
+| 3xx                    | **301** (Moved Permanently). Sivu löytyy toisesta URL:sta, joka lukee vastauksen headerissa. |
+| 4xx                    | **404** (Not Found). Dokumentti, jota GET pyysi, ei ole olemassa. |
+| 5xx                    | **500** (Internal Server Error). Geneerinen virhe. Palvelinpuolen koodissa on tapahtunut jotain odotamatonta. |
+
+HTTP/2.0 ja uudemmat käsitellään toisessa luvussa.
+
+
 
 ## Käytäntö
 

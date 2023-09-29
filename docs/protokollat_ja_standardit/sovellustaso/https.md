@@ -19,3 +19,5 @@ Kun osoitekentän URI alkaa `https://`-skeemalla, asiakas ja palvelin suorittava
 !!! question "Tehtävä"
     Suuntaa `https://www.kamk.fi` ja `https://www.yle.fi` etusivuille. Selvitä, mikä taho on kunkin sivuston sertifikaatin antanut varmenneviranomainen eli CA. Suuntaa myös sivulle `http://www.example.com/` ja tarkkaile kuinka selain käyttäytyy ei-salatun HTTP-sivuston kohdalla.
 
+!!! question "Tehtävä"
+    Yritä navigoida HTTP-protokollaa käyttäen (salaamattomana) Wikipedia-sivulle. Liitä tämä osoite verkkoselaimesi osoitekenttään: `http://en.wikipedia.org/wiki/World_Wide_Web`. Kun sivu aukeaa, klikkaa osoitekenttää ja katso oletko haluamallasi `http://`-alkuisella vai `https://`-alkuisella sivulla. Seuraavaksi tee sama curl:lla. Aja komento `curl -vvv http://en.wikipedia.org/wiki/World_Wide_Web`. Kuinka wikipedia vastaa?

@@ -28,7 +28,7 @@ Tyypillinen tietokoneen käyttäjä ei ole enää vuosikymmeniin käyttänyt tel
 
 Kokeile tätä käytännössä!
 
-1. Mikäli telnet ei ole asennettuna tai aktivoituna, etsi siihen käyttöjärjestelmän/distron mukainen ohje.
+1. Mikäli telnet ei ole asennettuna tai aktivoituna, etsi siihen käyttöjärjestelmän/distron mukainen ohje. MacOS:ssä tai Linuxissa voit käyttää myös sovellusta nimeltään nc.
 2. Aja komento `telnet example.com 80`, mikä avaa NVT:n porttiin 80. Porttia 80 kuuntelee HTTP-palvelin, joten sille voi syöttää HTTP-protokollan mukaisia viestejä. HTTP ei ymmärrä etäkäytöstä mitään.
 3. Kirjoita alla oleva viesti. Paina ++ctrl+shift+enter++ joka rivin välissä ja lopuksi lähetä viesti painamalla ++enter++ -näppäintä kerran tai kahdesti.
 
@@ -37,5 +37,12 @@ GET / HTTP/1.1
 Connection: close
 Host: example.com
 User-Agent: FeikkiSelain/1.0
+```
+
+Voit kokeilla myös tiiviimpää muotoa, jossa jätät muun muassa HTTP-protokollan version määrittelemättä:
+
+```http
+GET /
+Host: Example.com
 ```
 
