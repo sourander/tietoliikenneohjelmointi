@@ -91,3 +91,21 @@ Lyhin reitti reitittimien läpi ratkaistaan, milläpä muulla kuin, protokollall
 Emme tiedä, kuinka moneen aliverkon aliverkkoon (Kuvion 4) RIR1:een kuuluva AS1 on pilkottu. Meidän, kuten ei myöskään AS2:n reitttimen, ei tarvitse tietää tätä. AS1:n reittimet voivat hyvin ilmoittaa: *"Täältä löytyvät kaikki verkot 1.x.x.x"*. Näin AS2:n reititystaulun ei tarvitse sisältää jokaista aliverkkoa AS1:ssä, vaan sille riittää karkeimmalle mahdolliselle tasolle aggregoitu verkko-osoite: AS2:n reittitimet osaavat kyllä viedä paketin IP-osoitteen perusteella oikeaan aliverkkoon. Huomaathan, että Kuvion 4 esimerkissä AS:t on yksinkertaistettu siten, että niillä on vain yksi reititin.
 
 Se, mikä pysyy vakiona esimerkin monimutkaisuudesta riippumatta, on että
+
+## Reitin jäljittäminen
+
+Traceroute hyödyntää IP-paketin Time-to-Live (TTL) kenttää. Paketti lähetetään ensin TTL-arvolla 1, jolloin lähin reititin vastaa ICMPv4 Time Exceeded -viestillä. Sitten lähetetään TTL 2, TTL 3, TTL 3 ja niin edelleen, kunnes saavutetaan määränpää.
+
+```bash
+# Windows Command Promps
+$ tracert www.example.com
+
+# Linux/macOS
+$ traceroute www.example.com
+
+# Tutustu myös lisäasetuksiin. macOS:lla toimii esimerkiksi:
+# -a  ... joka suorittaa AS-queryt ja tulostaa ne
+# -n  ... joka käyttää vain IP-osoitteita eikä suorita reverse DNS hakuja
+# -q# ... joka rajaa testin # pakettiin
+$ traceroute -n -a -q1 www.example.com
+```
