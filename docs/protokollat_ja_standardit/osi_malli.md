@@ -36,7 +36,9 @@ Mikäli olet lukenut aiemmat luvut järjestyksessä, niin osaat jo odottaa, ett�
 ![TCP vs OSI models](../images/osi_model.svg)
 **Kuvio 1:** *Kaksi rinnakkaista laitetta, joista vasen lähettää viestin oikealle OSI-mallin kuvauksen mukaan*
 
-OSI-malli koostu seitsemästä tasosta tai kerroksesta. Kun informaatio kulkee horisontaalisesti, eli samalta tasolta samalle tasolle (yleensä eri tietokoneelle), niin kyseessä on **protokolla**. Kun informaatio kulkee vertikaalisesti, eli tasolta N tasolle N+1 tai N-1, niin kyseessä on **rajapinta** (eng. interface). Yllä oleva kuvio selventänee aiempia virkkeitä. Kuten aiemmissa luvuissa on todettu, alempi taso tuottaa ylemmälle tasolle palvelua. Alla kerrokset käydään läpi yksitellen, alkaen alimmasta eli konkreettisimmasta. 
+OSI-malli koostu seitsemästä tasosta tai kerroksesta. Kun informaatio kulkee horisontaalisesti, eli samalta tasolta samalle tasolle (yleensä eri tietokoneelle), niin kyseessä on **protokolla**. Kun informaatio kulkee vertikaalisesti, eli tasolta N tasolle N+1 tai N-1, niin kyseessä on **rajapinta** (eng. interface). Yllä oleva kuvio selventänee aiempia virkkeitä. Kuten aiemmissa luvuissa on todettu, alempi taso tuottaa ylemmälle tasolle palvelua. Alla kerrokset käydään läpi yksitellen, alkaen alimmasta eli konkreettisimmasta.
+
+Kun viesti siirtyy ylemmältä tasolta alemmalle, alempi taso kapsuloi (eng. encapsulate) viestin. Kun data siirtyy alemmalta ylemmälle, kapsulointi puretaan (eng. decapsulate). Katso JSON-pseudoesimerkki [Terminologia](../verkot/terminologia.md)-luennolta.
 
 !!! info 
 	Alla esitellään suomenkieliset termit kerroksille ja niitä käytetään silloin kun se on luontevaa. Kuvioissa ja taulukoissa ovat käytössä englanninkieliset termit. Mallin sanastossa on hitusen väljyyttä jo muutenkin, joten sekaannusten välttämiseksi on turvallisempaa käyttää joko tason numeroa tai englanninkielistä numeroa. Taso ja kerros ovat alla synonyymejä.

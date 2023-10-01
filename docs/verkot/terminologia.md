@@ -36,7 +36,7 @@ Jokaisella protokollalla on tarkasti määritelty muoto, joka tyypillisesti koos
 
 ## SDU ja PDU esimerkki
 
-Alla naiivi esimerkki, jossa joka kerroksen PDU on Python dictionary, ja SDU on JSON-merkkijonoksi serialisoitu (tai muodollisemmin sarjastettu) ylemmän kerroksen PDU:
+Alla naiivi esimerkki, jossa joka kerroksen PDU on Python dictionary, ja SDU on JSON-merkkijonoksi serialisoitu (tai muodollisemmin sarjastettu) ylemmän kerroksen PDU. Prosessi, jossa viesti sisällytetään alemman kerroksen PDU:ksi, tunnetaan nimellä kapsulointi (eng. encapsulate):
 
 ```python
 import json
