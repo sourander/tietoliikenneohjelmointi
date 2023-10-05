@@ -32,9 +32,14 @@ Eri protokollat ja mallit voivat käyttää poikkeavia nimiä tai päällekäisi
 | Kehys     | Frame      | 2        | OSI-mallin datayhteyskerroksella (2.) käytetty viesti, esimerkiksi Ethernet Frame.                                    |
 | Bitti     | bit        | 1        | Binääriluku eli ykkönen tai nolla.                                                                                    |
 
-Jokaisella protokollalla on tarkasti määritelty muoto, joka tyypillisesti koostuu vähintään kahdesta seuraavista: ylätunniste, data ja alatunniste (header, data, footer). Alatunnistetta eivät käytä läheskään kaikki protokollat. Data tunnetaan tässä yhteydessä myös nimellä payload eli suomennettuna hyötykuorma. Hyötykuorman sisältö on siis ylemmän kerroksen SDU. Jokaista kerrosta kiinnostaa käytännössä vain ja ainoastaan oma ylätunniste: data on vain dataa, joka siirretään, koska näin on käsketty tehtäväksi.
+Jokaisella protokollalla on tarkasti määritelty muoto, joka tyypillisesti koostuu vähintään kahdesta seuraavista: ylätunniste, data ja alatunniste (header, data, footer). Alatunnistetta eivät käytä läheskään kaikki protokollat. Data tunnetaan tässä yhteydessä myös nimellä payload eli suomennettuna hyötykuorma. Hyötykuorman sisältö on siis ylemmän kerroksen data. Jokaista kerrosta kiinnostaa käytännössä vain ja ainoastaan oma ylätunniste: data on vain dataa, joka siirretään, koska näin on käsketty tehtäväksi.
 
 ## SDU ja PDU esimerkki
+
+Termien selitykset:
+
+* PDU. Protocol Data Unit. Minkä tahansa kerroksen oma data.
+* SDU. Service Data Unit. Tietoyksikkö, millä nimellä ylemmältä kerrokselta alemmalle kerrokselle siirtynyt data tunnetaan. Tämä sisältyy PDU:n data tai payload kenttään.
 
 Alla naiivi esimerkki, jossa joka kerroksen PDU on Python dictionary, ja SDU on JSON-merkkijonoksi serialisoitu (tai muodollisemmin sarjastettu) ylemmän kerroksen PDU. Prosessi, jossa viesti sisällytetään alemman kerroksen PDU:n payloadiksi, tunnetaan nimellä kapsulointi (eng. encapsulate):
 
