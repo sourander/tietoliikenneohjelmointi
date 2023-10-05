@@ -36,25 +36,27 @@ Jokaisella protokollalla on tarkasti määritelty muoto, joka tyypillisesti koos
 
 ## SDU ja PDU esimerkki
 
-Alla naiivi esimerkki, jossa joka kerroksen PDU on Python dictionary, ja SDU on JSON-merkkijonoksi serialisoitu (tai muodollisemmin sarjastettu) ylemmän kerroksen PDU. Prosessi, jossa viesti sisällytetään alemman kerroksen PDU:ksi, tunnetaan nimellä kapsulointi (eng. encapsulate):
+Alla naiivi esimerkki, jossa joka kerroksen PDU on Python dictionary, ja SDU on JSON-merkkijonoksi serialisoitu (tai muodollisemmin sarjastettu) ylemmän kerroksen PDU. Prosessi, jossa viesti sisällytetään alemman kerroksen PDU:n payloadiksi, tunnetaan nimellä kapsulointi (eng. encapsulate):
 
 ```python
 import json
 
 def serialize(pdu):
+    # More realistic case would be to use e.g. UTF-8 encoding
+    # JSON has been chosen for human-readable output.
     sdu = json.dumps(pdu, indent=2)
     return sdu
 
 # Layer N+1 PDU
 n_plus_one = { 
-    "header": "N+2 header", 
+    "header": "N+1 header", 
     "payload": "FAKEPAYLOAD"
 } 
 
 # Layer N PDU
 n_plus_zero = { 
     "header": "N header", 
-    "payload": serialize(n_plus_one),
+    "payload": serialize(n_plus_one),  # N+1 layer's PDU is this layer's SDU
     "footer": "This layer happens to use footer"
 }
 
@@ -67,7 +69,7 @@ Koodin tuloste näkyy alla. Huomaathan, että tämä tulosteessa näkyvä entite
 ```json
 {
   "header": "N header",
-  "payload": "{\n  \"header\": \"N+2 header\",\n  \"payload\": \"FAKEPAYLOAD\"\n}",
+  "payload": "{\n  \"header\": \"N+1 header\",\n  \"payload\": \"FAKEPAYLOAD\"\n}",
   "footer": "This layer happens to use footer"
 }
 ```
