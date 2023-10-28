@@ -212,13 +212,13 @@ Mikäli Yritys X:n tarvitsee myöhemmin muuttaa aliverkkojen jakoja, sen tarvits
 
 Mikäli ymmärsit yllä esitellyt IP-osoiteluokat sekä aliverkot, on helppo ymmärtää kuinka osoiteluokista on luovuttu: koko Internetistä on tehty osoiteluokaton. Ylätasolla on organisaatio, joka jakaa alemman tason organisaatioilla osoite-avaruudesta palasia. Nämä organisaatiot taas jakavat omaa verkkoon aliverkoiksi ja myydän asiakkailleen. Mitä nämä organisaatiot ovat? Se selviää [organisaatioita käsittelevässä luvussa](../protokollat_ja_standardit/organisaatiot.md) tarkemmin, mutta komentoketju on esimerkiksi: IANA => RIPE NCC => Kaisanet. Kattojärjestön eli IANA:n jakamat IP-osoitealueet löytyvät [heidän sivuiltaan](https://www.iana.org/assignments/ipv4-address-space/ipv4-address-space.xhtml). Kaisanet voi myydä omistamistaan CIDR-verkoista asiakkailleen osoitteita.
 
-Yksittäisen julkisen IP-osoitteen blokin saa tietää alla olevalla bash-komennolla, olettaen että whois-ohjelma on sinulla asennettuna. Selvitä sinun oma julkinen ip-osoitteesi **googlettamalla "what is my ip"**.
+Yksittäisen julkisen IP-osoitteen blokin saa tietää alla olevalla bash-komennolla, olettaen että whois-ohjelma on sinulla asennettuna. Selvitä sinun oma julkinen ip-osoitteesi **googlettamalla "what is my ip"**. Vaihtoehtoisesti voit käyttää [Google Admin Toolboxin Browserinfoa](https://toolbox.googleapps.com/apps/browserinfo/)
 
 ```bash
 whois x.x.x.x # Täytä esimerkiksi oma julkinen ip-osoitteesi
 ```
 
-Komennosta voi paljastua esimerkiksi, että käyttämäsi yhteyden route on `77.223.32.0/19`, ja tämä kuuluu AS:ään `AS13170`, josta voi penkoa lisää tietoa esimerkiksi [bgp.tools-sivustolta](https://bgp.tools/as/13170). Mikäli klikkailet sivuston linkkejä, tulet löytämään upstream-suuntaisia reitittimiä (tai verkkoja), jotka ovat tavallista ISP:tä, kuten Kaisanetiä, paljon suurempia. Näitä ovat Tier-1 Networkit, jotka muodostavat Internetin backbonen, ja niitä operoivat muiden muassa AT&T, Verizon ja Lumen. Internetin verkotus on onneksi käyttäjän näkökulmasta hyvin abstrahoitu, joten Internetin "rungon" reitityksistä ei tarvitse tietää juuri tämän enempää.
+Komennosta voi paljastua esimerkiksi, että käyttämäsi yhteyden route on `77.223.32.0/19`, ja tämä kuuluu AS:ään `AS13170`, josta voi penkoa lisää tietoa esimerkiksi [bgp.tools-sivustolta](https://bgp.tools/as/13170) tai [PeeringDB-sivustolta](https://www.peeringdb.com/net/15905). Mikäli klikkailet sivuston linkkejä, tulet löytämään upstream-suuntaisia reitittimiä (tai verkkoja), jotka ovat tavallista ISP:tä, kuten Kaisanetiä, paljon suurempia. Näitä ovat Tier-1 Networkit, jotka muodostavat Internetin backbonen, ja niitä operoivat muiden muassa AT&T, Verizon ja Lumen. Internetin verkotus on onneksi käyttäjän näkökulmasta hyvin abstrahoitu, joten Internetin "rungon" reitityksistä ei tarvitse tietää juuri tämän enempää.
 
 ## CIDR-taulukko
 
