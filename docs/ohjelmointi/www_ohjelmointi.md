@@ -22,7 +22,7 @@ Tietokoneohjelmia voi luonnollisesti kirjoittaa useilla eri ohjelmointikielillä
 
 ## Muta- ja pastavertaukset
 
-Aivan kuten tietoliikenneverkot, myös ohjelmistot selitetään usein erilaisten abstraktioiden avulla. Ohjelmistolla on aina jokin arkkitehtuuri, halusit tai et. Pahimmillaan arkkitehtuuri on _big ball of mud_, parhaimmillaan arkkitehtuuri on valittu ohjelmistolle sopivaksi. Huomaathan, että (lähes muodotonta mutapalloa lukuunottamatta) yksikään arkkitehtuuri ei ole universaalisti paras. Arkkitehtuuri pitää valita käyttötapauksen mukaan.
+Aivan kuten tietoliikenneverkot, myös ohjelmistot selitetään usein erilaisten abstraktioiden avulla. Ohjelmistolla on aina jokin arkkitehtuuri, halusit tai et. Pahimmillaan arkkitehtuuri on _big ball of mud_, parhaimmillaan arkkitehtuuri on valittu ohjelmistolle sopivaksi. Huomaathan, että yksikään arkkitehtuuri ei ole universaalisti paras. Arkkitehtuuri pitää valita käyttötapauksen mukaan.
 
 Alla olevat lainaukset liittyvät termeihin Big Ball of Mud sekä Pasta Theory of Software. Tekstit ovat viihteellisiä, mutta antavat osviittaa siitä, mitä
 
