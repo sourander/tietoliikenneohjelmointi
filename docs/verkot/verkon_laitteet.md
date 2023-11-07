@@ -28,17 +28,22 @@ Kytkin (eng. switch) on muutoin samanlainen laatikko kuin keskitin, mutta käytt
 Kytkin mahdollistaa myös kaksisuuntaisen (eng. full-duplex) viestinnän. Tämä vaatii hieman selittämistä:
 
 * Yksisuuntainen (eng. simplex)
-  * Kaapeli tai muu kanava voi siirtää tietoa vain yhteen suuntaan. (Mikäli liikennettä halutaan kumpaankin suuntaan, tulee rakentaa meno- ja paluukanava kahdesta kaapelista vierekkäin. Tätä käyttävät optiset kuituyhteydet, ja kyseessä on tällöin kaksisuuntainen yhteys, joka selitetään alla.)
+    * Kaapeli tai muu kanava voi siirtää tietoa vain yhteen suuntaan. (Mikäli liikennettä halutaan kumpaankin suuntaan, tulee rakentaa meno- ja paluukanava kahdesta kaapelista vierekkäin. Tätä käyttävät optiset kuituyhteydet, ja kyseessä on tällöin kaksisuuntainen yhteys, joka selitetään alla.)
 * Vuorosuuntainen (eng. half-duplex)
-  * Kaapeli (tai muu) voi siirtää tietoa kumpaankin suuntaan, mutta vain yhteen suuntaan kerrallaan. Kuvittele yksikaistainen silta tai tunneli (näitä löytyy ainakin Islannista.) Keskittimen tapauksessa kaikki lähiverkon tietokoneet vuorottelevat saman dataväylän käytöstä, mistä syntyy väkisinkin törmäilyä (eng. collisions). Kuvittele liikenneympyrä, jossa saa olla kerrallaan vain yksi auto.
+    * Kaapeli (tai muu) voi siirtää tietoa kumpaankin suuntaan, mutta vain yhteen suuntaan kerrallaan. Kuvittele yksikaistainen silta tai tunneli (näitä löytyy ainakin Islannista.) Keskittimen tapauksessa kaikki lähiverkon tietokoneet vuorottelevat saman dataväylän käytöstä, mistä syntyy väkisinkin törmäilyä (eng. collisions). Kuvittele liikenneympyrä, jossa saa olla kerrallaan vain yksi auto.
 * Kaksisuuntainen (eng. full-duplex)
-  * Kaapeli (tai muu) voi siirtää tietoa kumpaankin suuntaan yhtä aikaa. Kuvittele kaksikaistainen tie. Kaksisuuntainen yhteys voi olla kerrallaan vain kahden tietokoneen välissä, joten jos keskustevia koneita on useita, kaksisuuntaisia yhteyksiä tulee olla useita.
+    * Kaapeli (tai muu) voi siirtää tietoa kumpaankin suuntaan yhtä aikaa. Kuvittele kaksikaistainen tie. Kaksisuuntainen yhteys voi olla kerrallaan vain kahden tietokoneen välissä, joten jos keskustevia koneita on useita, kaksisuuntaisia yhteyksiä tulee olla useita.
+
+!!! question "Tehtävä"
+
+    Kytkin mahdollistaa VLAN:ien (Virtual LAN) luomisen. Selvitä, mikä on VLAN.
 
 Mikäli sinulla on kaksi 16-porttista kytkintä, niin voit ketjuttaa ne (eng. daisy chain) tavallisella parikaapelilla, jolloin sinulle jää `(16 - 1) * 2` eli 30 porttia käytettäväksi. Voit pitää 30 pelaajan lanit! Useista kytkimistä voi rakentaa myös tähtikuvion verkon, jossa jokaisen sakaran päässä on kytkin. Lopputulos näyttää hieman lumihiutaleelta: :snowflake:.
 
 Osa kytkimistä on hallittavia, joten niillä on oma IP-osoite, johon voi kirjautua verkkoselaimella. Verkko-osoitteesta löytyvästä hallintapaneelista voi hallita asetuksia.
 
 !!! question "Tehtävä"
+
     Selvitä, onko MAC-osoite aina pysyvästi sama yhdellä laitteella, vai voiko tietokone väittää omaksi MAC-osoitteekseen jonkin toisen laitteen MAC-osoitteen - tai hatusta temmatun MAC-osoitteen.
 
 
@@ -55,7 +60,8 @@ graph LR;
 
 **Kuvio 1:** *Modeemin toiminta pelkistettynä*
 
-!!! warning 
+!!! warning
+
     Huomaa, että modeemissa on lähtökohtaisesti vain yksi sisäänmeno ja yksi ulostulo. Kaupassa myytävä laite, esimerkiksi kaapelimodeemi, on yleensä useita eri laitteita sisältävä kokonaisuus, johon kuuluu esimerkiksi 5-porttinen kytkin, langattoman verkon liityntäpiste (eng. Wireless Access Point, WAP), reititin, palomuuri, http-palvelin, DNS-palvelin, NAT, DHCP-palvelin ynnä muuta.
 
 
@@ -97,11 +103,13 @@ graph LR
 
 
 !!! question "Tehtävä"
+
 	Selvitä, kuinka Raspberry Pi:stä, eli tunnetusta yhden piirilevyn tietokoneesta, voi rakentaa kaksi langallista verkkoa yhdistävän reitittimen käyttäen OpenWrt Linux-distribuutiota. Yksi verkko kytketään Raspberry Pi:n Ethernet-verkkoporttiin, mutta mihin ihmeeseen toinen?
 
 Tyypillisesti kotiverkon reitittimeen (tai reititin-modeemiin) voi kirjautua verkkoselaimella samalla tavalla kuin hallittaviin kytkimiin. Verkko-osoitteesta löytyvästä hallintapaneelista voi säätää yleisesti DHCP-asetuksia, modeemin asetuksia, ja paljon muuta.
 
 !!! question "Tehtävä"
+
 	Kuvittele tilanne, jossa sinulla on **oikeasti** vain modeemi, mutta ei reititintä. Kuinka monta tietokonetta voit kytkeä Internetiin? Mieti, mitä tapahtuu jos kytket modeemista saapuvan Ethernet-kaapelin kytkimeen, ja kytket siihen 5 tietokonetta. Onko tällä jotakin yhtäläisyyksiä kotisi reititin-modeemin "Bridge Mode"-tilaan.
 
 
@@ -144,4 +152,5 @@ graph LR
 **Kuvio 3:** Reititin-modeemin sisukset, mukaan lukien palomuuri, piirrettynä auki. Kotiverkko on kytketty Internetiin palveluntarjoajan nimeämättömän laitteen läpi.
 
 !!! question "Tehtävä"
+
 	Päättele, mikä tai mitä laitteita palveluntarjoajan päässä on vastassa (Kuviossa 3.)

@@ -18,6 +18,7 @@ Tietokoneohjelmia voi luonnollisesti kirjoittaa useilla eri ohjelmointikielillä
 | Vue.js       |   11758   |            6804             |        58        |
 
 !!! question "Tehtävä"
+
     Tutustu pintapuoleisesti ainakin yllä olevien sovellusten Top 5:een. Millä kielellä framework on toteutettu? Onko kyseessä palvelin- vai asiakaspuolen framework? Käy tutustumassa ja vertaamassa tätä W3Techs-sivuston kyselytuloksiin [palvelinpuolen ohjelmistokielistä](https://w3techs.com/technologies/overview/programming_language) sekä [asiakaspuolen ohjelmistokielistä](https://w3techs.com/technologies/overview/client_side_language) sekä [asiakaspuolen JavaScript-kirjastoista](https://w3techs.com/technologies/overview/javascript_library).
 
 ## Muta- ja pastavertaukset
@@ -59,6 +60,7 @@ Tämän kurssin yhteydessä ei ole tarvetta käyttää aikaa pohtimiseen, että 
 Yksi ilmentymä 3-kerroksisesta arkkitehtuurista on Model-View-Controller (MVC) pattern eli sapluuna. MVC:stä löytää helposti jopa aika kärkästäkin debatointia niin Stack Overflowsta, Redditistä kuin blogeiltakin. Tämän kurssin puitteissa riittää tietää, että 1990 luvun alussa Internet oli spagettikoodista koostuva kaaos, ja MVC oli yksi ratkaisu siihen, ja MVC perustuu itseään reilusti vanhempaan 3-kerrosarkkitehtuuriin. Lisäksi MVC:n perustermit on hyvä ymmärtää.
 
 !!! question "Tehtävä"
+
     Etsi keskustelua, kommentointia tai väittelyä siitä, mikä MVC on tai ei ole. Voit kokeilla myös ChatGPT:tä, Bardia tai muuta LLM:ää.
 
 Komponenttien Model, View ja Controller tehtävät ovat seuraavat:
@@ -119,6 +121,7 @@ Tämän kurssin puitteissa kirjoitemme front end koodia (`HTML + CSS + JavaScrip
 2. Arkkitehtuurin oikea puoli, back end, voi noudattaa MVC:tä. Tästä on erillinen graafi alempana (Kuvio 3).
 
 !!! question "Tehtävä"
+
     Selvitä, mitä hyötyä on kerrostamisesta ja/tai modularisoinnista. Tämä saattaa olla jo OSI-tietomallin sekä yllä olevan tekstin perusteella arvattavissa tai pääteltävissä, mutta käy silti lukemassa aiheesta lisää.
 
 Kerrostetussa arkkitehtuurissa eri nuolien välillä on riippuvuus. Tämä riippuvuus on rajapinta eli interface, jota kummankin tulee noudattaa. Kunhan rajapinta pysyy samana, laatikon sisältöä voi muokata mielin määrin. Esimerkiksi front endin ja back endin välillä rajapintana on REST API, joka käyttää tavallisia HTTP-käskyjä. On täysin mahdollista vaihtaa Pythonilla koodattu back end vaikkapa Go:lla koodattuun back endiin. Sivuston toimivuus ei muutu. Koko REST API:n voi vaihtaa esimerkiksi Google Protobuffiin; tällöin JavaScriptin Model-päätyyn tulee tehdä muutoksia, koska `JS <--> Python`-rajapinta on vaihtunut REST API:sta Protobuffiin. Huomaathan, että tämä ei aiheuta muutoksia HTML- tai CSS-tiedostoihin tai Controlleri-osion logiikkaan. Kerrostamisen avulla ohjelmistoa voi siis modularisoida pieniin laatikoihin ja niiden välisiin rajapintoihin.
@@ -145,7 +148,9 @@ Entäpä tilanne, jossa arkkitehtuuri ei koostukaan kerroksista? Mitä jos se ko
 Huomaa, että nämä eivät ole huonompia tai parempi kuin kerroksista koostuvat arkkitehtuurit. Järjestelmälle asetetut vaatimukset ja järjestelmän monimutkaisuus määrittelevät, mikä arkkitehtuuri sopii millekin. Lopulta universaalia totuutta ei välttämättä edes ole, vaan arkkitehdin on pakko valita jotakin. Myöhemmin arkkitehtuuria voi refaktoroida, mutta se voi olla merkittävän kallista työmäärällisesti.
 
 !!! question "Tehtävä"
+
     Lue lisää siitä, kuinka perinteinen Web 1.0:sta kehittyi eventtipohjaisten arkkitehtuurien koti: [A Technical Deep Dive on Event Driven Architectures](https://blog.quastor.org/p/tech-dive-event-driven-architectures-a55d)
 
 !!! question "Tehtävä"
+
     Lue lisää siitä, ovatko monoliitit aina pahasta: [Death by a Thousand Microservices](https://renegadeotter.com/2023/09/10/death-by-a-thousand-microservices.html)
