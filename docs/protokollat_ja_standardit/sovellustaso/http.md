@@ -12,7 +12,7 @@ HTTP:n on luonut Tim Berners-Lee ja järjestelmä sai alkunsa 1989. Tällöin Be
 | -------- | -------------------------------------------------- |
 | HTTP/0.9 | 1991                                               |
 | HTTP/1.0 | 1996                                               |
-| HTTP/1.1 | 1994                                               |
+| HTTP/1.1 | 1997                                               |
 | HTTP/2   | 2015                                               |
 | HTTP/3   | [TBA](https://www.rfc-editor.org/rfc/rfc9114.html) |
 
@@ -35,11 +35,11 @@ HTTP/1.1 ei levännyt täysin staattisesti laakereillaan, vaan siihen on lisätt
 
 Yllä mainittiin statuskoodit. Ne tulevat palvelinta kokeillessa tutuksi. Alla kuitenkin muutama statuskoodi, joihin todennäköisesti törmäät jo tämän kurssin aikana:
 
-| Statuskoodin kategoria | Esimerkki                                                    |
-| ---------------------- | ------------------------------------------------------------ |
-| 2xx                    | **200** (OK). Pyyntöön vastattu onnistuneesti.               |
-| 3xx                    | **301** (Moved Permanently). Sivu löytyy toisesta URL:sta, joka lukee vastauksen headerissa. |
-| 4xx                    | **404** (Not Found). Dokumentti, jota GET pyysi, ei ole olemassa. |
+| Statuskoodin kategoria | Esimerkki                                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 2xx                    | **200** (OK). Pyyntöön vastattu onnistuneesti.                                                                |
+| 3xx                    | **301** (Moved Permanently). Sivu löytyy toisesta URL:sta, joka lukee vastauksen headerissa.                  |
+| 4xx                    | **404** (Not Found). Dokumentti, jota GET pyysi, ei ole olemassa.                                             |
 | 5xx                    | **500** (Internal Server Error). Geneerinen virhe. Palvelinpuolen koodissa on tapahtunut jotain odotamatonta. |
 
 HTTP/2.0 ja uudemmat käsitellään toisessa luvussa.
