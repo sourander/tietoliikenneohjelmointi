@@ -34,7 +34,7 @@ Ongelman voi pyrkiä ratkaista monin muin tavoin, joihin lukeutuvat:
 
 ## HTTP/2 ratkaisut
 
-Yllä esitellyt kikat paikata HTTP/1.1:n tehottomuutta toimivat jossakin määrin, mutta HTTP/2 tarjoaa kestävämpiä ratkaisuja. Itse standardi löytyy IETF:n sivuilta: [RFC 7540](https://datatracker.ietf.org/doc/html/rfc7540)
+Yllä esitellyt kikat paikata HTTP/1.1:n tehottomuutta toimivat jossakin määrin, mutta HTTP/2 tarjoaa kestävämpiä ratkaisuja. Itse standardi löytyy täältä: [RFC 9113](https://www.rfc-editor.org/rfc/rfc9113)
 
 !!! warning
 
