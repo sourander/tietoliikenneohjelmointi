@@ -14,13 +14,9 @@ Keskitin (eng. hub) on Ethernet-lähiverkoissa rasia, jossa on kasa naaraspuolis
 
 Hubiin kytketyt laitteet jakavat saman dataväylän. Vain yksi voi lähettää viestin kerrallaan, muut odottavat vuoroaan. Tästä käytetään termiä vuorosuuntainen (eng. half-duplex). Kaikki saavat kaikkien lähettämät viestit. Toisten viestejä ei siis varsinaisesti tarvi salakuunnella: saat ne väkisin. Ylemmän tason protokolla hylkää viestit, jotka eivät kuulu vastaanottajalle. Vai hylkäävätkö ... :spy:
 
-Käytännössä keskittimen on kotikäytössä korvannut kokonaisuudessa kytkin.
-
-
-
 ## Kytkin (Taso 2)
 
-Kytkin (eng. switch) on muutoin samanlainen laatikko kuin keskitin, mutta käyttää viestien välittämiseen MAC-osoitteita eli tietokoneiden fyysisiä osoitteita. Näin tietokoneelta toiselle lähetetty viesti voidaan lähettää vain vastaanottajan porttiin (vtr. keskitin, joka lähettää kaikki viestit kaikille).
+Kytkin (eng. switch) on muutoin samanlainen laatikko kuin keskitin, mutta käyttää viestien välittämiseen MAC-osoitteita eli tietokoneiden fyysisiä osoitteita. Näin tietokoneelta toiselle lähetetty viesti voidaan lähettää vain vastaanottajan porttiin (vtr. keskitin, joka lähettää kaikki viestit kaikille). Käytännössä kytkin on korvannut kotikäytössä kokonaisuudessa keskittimen. Keskittimessä kaikki koneet jakavat saman dataväylän, kun taas kytkimessä jokaisella koneella on oma dataväylänsä. Keskittimessä on siis yksi ==törmäysalue== (eng. collision domain), kun taas kytkimessä jokaisella koneella on oma törmäysalueensa.
 
 !!! question "Tehtävä"
 	Selvitä, mikä on silta (eng. bridge) ja miten se eroaa, jos mitenkään, kytkimestä.
@@ -69,6 +65,8 @@ graph LR;
 ## Reititin (Taso 3)
 
 Reititin (eng. router) on laite, joka yhdistää eri verkkoja toisiinsa. Yllä mainittuja kytkittimiä voi ketjuttaa, mutta niiden tulee lähtökohtaisesti olla samaa tyyppiä, kuten Ethernetiä, ja kytkennän lopputuloksesta muodostuu käytännössä yksi iso verkko. Reititin mahdollistaa ==keskenään erilaisten== verkkojen yhdistämisen toisiinsa - toki verkot voivat olla myös samanlaisia. Reitittimen voi kytkeä myös toiseen reitittimeen, ja reitittimistä voi rakentaa suuren verkon, kuten vaikkapa Internetin. Tällöin reititin voi yhdistää LAN:n ja WAN:n toisiinsa. Huomaa, että reitittimessä voi olla myös enemmän kuin 2 verkkokorttia, jolloin se voi yhdistää useita eri verkkoja yhteen tähtimäisesti.
+
+Huomaa, että reitittimeen kiinni olevilla verkoilla on kullakin oma ==levitysviestialue== (eng. broadcast domain). Ethän sekoita tätä termiä ==törmäysalueeseen== (eng. collision domain).
 
 ```mermaid
 graph LR
