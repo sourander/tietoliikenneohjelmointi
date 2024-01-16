@@ -43,20 +43,23 @@ graph LR
 **Kuvio 2:** *Lähettäjän ja vastaanottajan välille rakennettu reitittimistä koostuva verkosto. Jokainen peräkkäin lähetetty paketti voi kulkea eri reittiä.*
 
 !!! question "Tehtävä"
+
     Mieti tai selvitä, mitä hyötyjä ja haittoja on kummassakin tiedonsiirtotavassa. Onko jompi kumpi parempi, vai onko lopputulema "riippuu"?
 
 !!! question "Tehtävä"
+
     Mieti mitä tapahtuu, jos reittimet R5 ja R6 luulevat vastaanottajan asuvan graafin vasemmalla puolella eli ne on konfiguroitu väärin. Paketti kulkee reittiä `Lähettäjä -> R3 -> R5 -> R2 -> R6 -> R3 -> (repeat)` eli jää ikuiseen looppiin. Kuinka tältä voi välttyä? Kuinka Posti estäisi tämän? Entä internetin reitittimet?
 
 Protokollaperheet koostuvat kerroksista, ja eri kerroksilla voi olla eri näkymys tiedonsiirrosta. Kuvittele, että yhdistät internetiin isoäidin vintiltä löytyneellä 56 kbps modeemilla, joka käyttää vanhaa lankapuhelinverkkoa tiedonsiirtoon. TCP/IP:n mukaisesti kapseloisit pyynnön IP-paketteihin. Kuten nimestä voi arvata, kyseessä on nimenomaan paketti, ja IP-paketit käyttävät pakettivälitteistä tiedonsiirtoa. Samaan aikaan modeemin hyödyntämä puhelinlinja on piirikytkentäinen. Käytät siis kumpaakin, mutta eri tasoilla!
 
 !!! tip
+
     Kuvittele, että oikeasti selaisit internetiä 2020-luvulla 56 kbps modeemilla. Alla pikainen iltasanomat.fi etusivun (ilman scrollailua) lataamisesta tehty laskelma.
 
     | Keksit    | Koko (Mt) | Pyynnöt (#) | Karkea latausaika (56 kbps) |
-    | --------- | :-------: | :---------: | -------------------------- |
-    | Kielletty |    1.7    |     77      | 4 min                      |
-    | Sallittu  |    2.7    |     195     | 6 min 30 s                 |
+    | --------- | :-------: | :---------: | --------------------------- |
+    | Kielletty |    1.7    |     77      | 4 min                       |
+    | Sallittu  |    2.7    |     195     | 6 min 30 s                  |
     
     :exploding_head: Mikäli olisit mediakonsernin kanssa yhtä mieltä, että saat parempia palveluita ja kohdennettuja mainoksia hyväksymällä evästeet, saisit odottaa pelkkien evästeiden latautumista kaksi ja puoli minuuttia. 
 
@@ -70,6 +73,7 @@ Yhteyden muodostavaa protokollaa käyttävä viestijä lähettää yhteyden muod
 Yhteydetöntä protokollaa käyttävä viestijä lähettää viestin ilman yhteyttä. Käytetyt termit auttavat tässä. Ei-kytkentäisten (eng. connectionless) protokollien viesteistä käytetään termiä datagram (esim. UDP datagram), joka viittaa termiin telegram (suom. sähke), ja kääntyy suomeksi datasähkeeksi. Ei-kytkentäisiä protokollia ja sähkeitä yhdistää se, että kumpaakaan ei ole pakko kuitata vastaanotetuksi (eng. acknowledge, lyhennettynä ACK.)
 
 !!! note
+
     Huomaathan että 
     
 
@@ -95,4 +99,5 @@ Alla 2x2 matriisi, jossa esimerkkiprotokollat eri kombinaatioista.
 | **Pakettivälitteinen<br />packet-switching** | UDP, ICMP, QUIC                     | TCP, MQTT                             |
 
 !!! question "Tehtävä"
+
 	Selvitä, mitkä ovat hyödyt ja haitat UDP:n ja TCP:n välillä. Mihin tarkoituksiin ne soveltuvat?
