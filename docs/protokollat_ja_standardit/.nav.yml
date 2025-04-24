@@ -3,4 +3,4 @@ nav:
   - OSI-malli: osi_malli.md
   - TCP/IP-malli: tcp_malli.md
   - Life of a Query: life_of_a_query.md
-  - ...
+  - "*"

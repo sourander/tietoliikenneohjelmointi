@@ -7,4 +7,3 @@ nav:
   - Webhook: webhook.md
   - MQTT: mqtt.md
   - QUIC: quic.md
-  - ...
