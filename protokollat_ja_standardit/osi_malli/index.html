@@ -1,0 +1,1578 @@
+
+<!doctype html>
+<html lang="fi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../organisaatiot/">
+      
+      
+        <link rel="next" href="../tcp_malli/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>OSI-malli - Tietoliikenneohjelmointi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#osi-malli" class="md-skip">
+          Hyppää sisältöön
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Ylätunniste">
+    <a href="../.." title="Tietoliikenneohjelmointi" class="md-header__button md-logo" aria-label="Tietoliikenneohjelmointi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tietoliikenneohjelmointi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OSI-malli
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Hae" placeholder="Hae" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Haku">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Tyhjää" aria-label="Tyhjää" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Aloitetaan hakua
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigaatio" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tietoliikenneohjelmointi" class="md-nav__button md-logo" aria-label="Tietoliikenneohjelmointi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tietoliikenneohjelmointi
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tervetuloa kurssille
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verkot
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Verkot
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/m%C3%A4%C3%A4ritelm%C3%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verkon määritelmä
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/terminologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminologia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/kommunikaatiometodit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kommunikaatiometodit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/skaala/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skaala
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/verkon_laitteet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verkon laitteet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Internet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Internet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/osoitteet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Osoitteet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/nat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NAT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/nimet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nimet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/uri_ja_url/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    URI ja URL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/komennot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Komennot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protokollat ja standardit
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Protokollat ja standardit
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../organisaatiot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organisaatiot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OSI-malli
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OSI-malli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mallin-kaytto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mallin käyttö
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kerrokset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kerrokset
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tcp_malli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TCP/IP-malli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../life_of_a_query/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Life of a Query
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reititys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reititys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sovellustaso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sovellustaso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/telnet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telnet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/http2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP/2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/websocket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebSocket
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/webhook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/mqtt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/quic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QUIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohjelmointi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ohjelmointi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjelmointi/www_ohjelmointi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WWW-ohjelmointi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjelmointi/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjelmointi/rest_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjelmointi/hakemistorakenne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hakemistorakenne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mallin-kaytto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mallin käyttö
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kerrokset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kerrokset
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="osi-malli">OSI-malli</h1>
+<p>Jos avaat melkein minkä tahansa kirjan tietoverkoista, todennäköisyys törmätä termiin OSI on valtava. OSI-referenssimalli (Open Systems Interconnection Reference Model) on tapa mallintaa tai abstrahoida tietoverkkoja. OSI-malli ei suinkaan ole ainut tietoverkkoja kuvaava malli, ja myöhemmässä luvussa vertaamme sitä sekä TCP/IP-referenssimalliin että varsinaiseen TCP/IP-protokollaperheeseen.</p>
+<p>OSI-mallin kerroksiin viitataan myös myös käytännön tuotteissa ja niiden dokumentaatiossa. Katso alla olevat lainaukset pilvipalveluntarjoajien AWS ja Azure dokumentaatioista.</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>AWS Network Firewall complements existing network and application security services on AWS by providing control and visibility to Layer 3-7 network traffic for your entire VPC. --<a href="https://aws.amazon.com/network-firewall/faqs/">AWS Network Firewall FAQs</a></p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Azure Load Balancer operates at layer 4 of the Open Systems Interconnection (OSI) model. --<a href="https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview">What is Azure Load Balancer?</a></p>
+</div>
+<p>OSI-malli julkaistiin 1980-alkuvaiheilla. Sen kirjoittajien, joihin lukeutuvat järjestöt ISO ja CCITT, ja sen tukijoiden, joihin lukeutuvat muun muassa teleoperaattorit <img alt="🇩🇪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1e9-1f1ea.svg" title=":de:" /> Deutsche Bundespost, <img alt="🇬🇧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1ec-1f1e7.svg" title=":gb:" /> British Telecom sekä <img alt="🇫🇷" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f1eb-1f1f7.svg" title=":fr:" /> France Telecom, tavoitteena oli luoda mallin pohjalta OSI-protokollaperhe (OSI protocol suite). OSI-protokollaperhe hävisi "protokollasodan" suurista tukijoista huolimatta. Internetin sydämessä sykkii TCP/IP-protokollaperhe; ei OSI-protokollaperhe. OSI-malli jäi kuitenkin elämään, kuten on nähtävissä muun muassa yllä olevissa lainauksissa.</p>
+<h2 id="mallin-kaytto">Mallin käyttö</h2>
+<p>Verkkotyöskentely (eng. networking) on merkittävän monimutkaista. Monimutkaisia ilmiöitä on järkevää yrittää jäsennellä pienempiin loogisiin kokonaisuuksiin. Samalla syntyy ammattisanastoa, joka antaa monimutkaisille ilmiöille sanan, jonka toisetkin alan ammattilaiset ymmärtävät. Tässä OSI-malli on avuksi. Mallit itsessään ovat teoreettisia pelkistyksiä eivätkä täten kykene täysin selittämään reaalimaailman toteutuksen kaikki nyansseja. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Käytännössä jotkut tosimaailman protokollat ovat limbossa kahden eri tason välissä. Esimerkiksi MPLS on "Layer 2.5" protokolla. Kuinka monta sanaa tarvittaisiin selittämään sama asia, jos vastaanottaja ei tunne OSI-mallia tai sen tasoja?</p>
+<p>Protokollat eivät toteuta orjallisesti OSI-mallia tai mitään muutakaan abstraktiota, joten älä yritä turhaan survoa <img alt="🟧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f7e7.svg" title=":orange_square:" />-muotoista palikkaa <img alt="🟠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f7e0.svg" title=":orange_circle:" />-muotoiseen koloon.</p>
+</div>
+<p><a href="https://nostarch.com/tcpip.htm">TCP/IP Guide</a> -kirjan, jonka lukeminen on suositeltavaa, ehdotus on, että kysymykseen "Millä tasolla tämä laiteisto toimii?" kannattaa lisätä sana <mark>ylimmillään</mark>. Esimerkiksi reititin toimii ylimmillään tasolla 3, mutta voi hyödyntää alempien tasojen rajapintoja. Yksittäinen protokolla voi istua hyvinkin yhdelle kerrokselle tai olla istumatta. Yleisesti protokollana tunnettu PPP on esimerkiksi aiemmin mainitun kirjan mukaan protokollaperhe (eng. protocol stack), joten jo protokollaperheen määritelmä ajaa siihen, että PPP toimii usealla kerroksella.</p>
+<p>Tarinan opetus: koita käyttää OSI-mallia yksinkertaistamaan monimutkaista todellisuutta. Älä mieti liian tarkkaan yksityiskohtia.</p>
+<h2 id="kerrokset">Kerrokset</h2>
+<p>Mikäli olet lukenut aiemmat luvut järjestyksessä, niin osaat jo odottaa, että jossain luvussa esitellään OSI-mallin 7 kerrosta. Ja nyt se tapahtuu!</p>
+<p><img alt="TCP vs OSI models" src="../../images/osi_model.svg" />
+<strong>Kuvio 1:</strong> <em>Kaksi rinnakkaista laitetta, joista vasen lähettää viestin oikealle OSI-mallin kuvauksen mukaan</em></p>
+<p>OSI-malli koostu seitsemästä tasosta tai kerroksesta. Kun informaatio kulkee horisontaalisesti, eli samalta tasolta samalle tasolle (yleensä eri tietokoneelle), niin kyseessä on <strong>protokolla</strong>. Kun informaatio kulkee vertikaalisesti, eli tasolta N tasolle N+1 tai N-1, niin kyseessä on <strong>rajapinta</strong> (eng. interface). Yllä oleva kuvio selventänee aiempia virkkeitä. Kuten aiemmissa luvuissa on todettu, alempi taso tuottaa ylemmälle tasolle palvelua. Alla kerrokset käydään läpi yksitellen, alkaen alimmasta eli konkreettisimmasta.</p>
+<p>Kun viesti siirtyy ylemmältä tasolta alemmalle, alempi taso kapsuloi (eng. encapsulate) viestin. Kun data siirtyy alemmalta ylemmälle, kapsulointi puretaan (eng. decapsulate). Katso JSON-pseudoesimerkki <a href="../../verkot/terminologia/">Terminologia</a>-luennolta.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Alla esitellään suomenkieliset termit kerroksille ja niitä käytetään silloin kun se on luontevaa. Kuvioissa ja taulukoissa ovat käytössä englanninkieliset termit. Mallin sanastossa on hitusen väljyyttä jo muutenkin, joten sekaannusten välttämiseksi on turvallisempaa käyttää joko tason numeroa tai englanninkielistä numeroa. Taso ja kerros ovat alla synonyymejä.</p>
+</div>
+<h1 id="tasot-1-4-infrastruktuurikerrokset">Tasot 1-4: Infrastruktuurikerrokset</h1>
+<h3 id="taso-1-physical">Taso 1: Physical</h3>
+<p>Alin taso on suomeksi fyysinen kerros, peruskerros tai siirtopiirikerros. Fyysisen kerroksen keskeinen tehtävä on siirtää bitit kommunikaatiokanavaan. Huomaa, että fyysinen kerros ei edusta kaapelia, vaan pikemminkin sitä rajapintaa, joka huolehtii että kaapeliin päätyy oikeanlainen signaali. Laitetasolla kerrosta yksi vastaavat modeemi ja keskitin eli hubi.</p>
+<h3 id="taso-2-data-link">Taso 2: Data Link</h3>
+<p>Toiseksi alin tas on suomeksi siirtokerros, siirtoyhteyskerros tai tietoyhteyskerros. Kerros vastaa datakehysten (eng. data frame) siirrosta kahden noodin, kuten tietokoneen, välillä. Kerroksen tehtäviä ovat muun muassa fyysisen osoitteiston (eli käytännössä MAC-osoitteiden) käsittely sekä ylemmiltä tasoilta saapuvien viestien pilkkominen sellaisiin palasiin, että vastaanottaja (eli keskustelukumppanin saman kerroksen sama protokolla) kykenee vastaanottamaan ne. Laitetasolla kerrosta vastaavat kytkin ja verkkokortit. Data link -kerros liittyy siis sellaisiin protokolliin, jossa koneet ovat tavalla tai toisella toisiinsa suoraan kytkettyinä yhteisen tiedonsiirtokanavan avulla. Tasolla toimivat protokollat käsittelevät alemman tason vikatilanteet, jotta ylempien ei tarvitse niistä murehtia.</p>
+<h1 id="tasot-3-4-loogiset-kerrokset">Tasot 3-4: Loogiset kerrokset</h1>
+<h3 id="taso-3-network">Taso 3: Network</h3>
+<p>Kolmas kerros alhaalta on suomeksi verkkokerros tai verkkotaso. Huomaa, että tällä kerroksella verkko on looginen eikä fyysinen. Tällä tasolla toimivat reitittimet, jotka yhdistävät eri loogiset verkot toisiinsa, ja täten myös loogiset osoitteet. Kerroksen protokollat pakkaavat ylemmän kerroksen viestin paketeiksi. Mikäli ylhäältä tuleva viesti on liian suuri paketin (standardin määritelmän mukaan), niin data saatetaan fragmentoida useiksi pienemmiksi paketeiksi, ja vastaavasti kasata pienissä osissa saapuva paketti takaisin yhtenäiseksi kokonaisuudeksi. Tämän kerroksen protokollat huolehtivat myös viestikanavan ruuhkaisuudesta (eng. congestion) eli hillitsee pakettien lähettämistä alemmille kerroksilla mikäli paketeista alkaa muodostua ruuhkaa. </p>
+<h3 id="taso-4-transport">Taso 4: Transport</h3>
+<p>Neljäs kerros alhaalta on suomeksi kuljetuskerros. Tasojen kolme ja neljä välillä on todella vahva yhteys, mikä on huomattavissa muun muassa siitä, että protokollaperheitä nimetään näiden kahden kombinaationa (TCP/IP, IPX/IPX). Mikäli protokolla on kytkentäinen (eng. connection-oriented) kuten TCP, niin tämän kerroksen protokolla määrittelee, kuinka yhteys neuvotellaan auki, kuinka se pidetään auki, ja kuinka se katkaistaan. Mikäli protokolla on ei-kytkentäinen (eng. connectionless) kuten UDP, tätä ei tehdä.</p>
+<p>Samaa fyysisestä (ja alemmilla tasoilla myös loogista) viestikanavaa käyttävät samaan aikaan useat eri applikaatiot, ja tämä kerros huolehtii viestin limityksestä tai kanavoinnista (eng. multiplexing) sekä kanavoinnin purkamisesta (eng. demultiplexing). Tilanne on hieman sama kuin digitaalisessa videostriimissä tai -tiedostossa, jossa yhteen bittivirtaan on upotettu yksi tai useampi kuvaraita, useita ääniraitoja ja tekstitykset. Jotta eri applikaatiot ja niille kuuluvat paketit voidaan jakaa oikeisiin laareihin, tarvitaan sovelluskohtainen tunniste. TCP/IP-protokollaperheessä tämä tunnetaan nimellä portti. IP-osoitteella tunnistetaan toisessa verkossa oleva tietokone; parilla IP + PORT tunnistetaan myös sovellus.</p>
+<h1 id="tasot-5-7-applikaatiokerrokset">Tasot 5-7: Applikaatiokerrokset</h1>
+<h3 id="taso-5-session">Taso 5: Session</h3>
+<p>Viides kerros on suomeksi yhteysjaksokerros, yhteystapahtumakerros tai istuntokerros. Nimestä voi päätellä, että kerroksella huolehtitaan istunnoista (eng. sessions). Istunto yhdistää kaksi tietokonetta toisiinsa (loogisella tasolla), jotta ne voivat muodostaa keskenään yksittäistä viestiä pidemmän keskustelun. Samaan istuntoon liittyvillä viesteillä täytyy olla siis jokin tunniste. TCP/IP-protokollaperheessä vastaava istunto, tai sen ylemmille tasoille näkyvä rajapinta, on nimeltään TCP/IP Socket. Huomaa, että OSI-mallin istunto ei ole sama asia kuin verkkomaailmasta tuttu selainistunto, joka käyttää evästeitä eli keksejä (eng. cookies). Nuo istunnot on rakennettu vasta tason 7 yläpuolelle, esimerkiksi HTTP-rajapinnan päälle, eli sovelluksen omalle tontille. Tason 5 tarkoittama istunnon toteutus on paljon alemmalla tasolla; tietokoneen tapauksessa käyttöjärjestelmän kernelin uumenissa.</p>
+<h3 id="taso-6-presentation">Taso 6: Presentation</h3>
+<p>Toiseksi ylin kerros on suomeksi esityskerros tai esitystapakerros. Tämä kerros puuttuu datan presentaatioon, josta yksi esimerkki on merkistö (eng. character set). Tällä tasolla toimiva protokolla voi esimerkiksi kääntää windows-ympäristöstä tutut CRLF-rivinvaihdot UNIX-maailmasta tuttuihin LF-rivinvaihtoihin. Myös salaus voidaan hoitaa presentaatiokerroksella, kuten SSL:n yhteydessä, mutta toisaalta myös alemmat kerrokset voivat salata viestin (joka olisi tällöin tuplasti salattu.) Dataa voidaan myös kompressoida kuljetusta varten: esimerkiksi REST-rajapinnoissa käytetyt JSON-tiedostot voivat pienentyä merkittävästi, jolloin verkon IO-kuormaa siirretään CPU-kuormaksi (koska pakkaus syö CPU-aikaa.) Kaikki protokollat eivät välttämättä käytä tason 6 operaatioita laisinkaan, jos viestin formaatti on riittävän universaali eikä sitä tarvitse salata - tai se on salattu OSI-kerroksia hyödyntävän sovelluksen toimesta.</p>
+<h3 id="taso-7-application">Taso 7: Application</h3>
+<p>Ylin kerros on suomeksi sovelluskerros. Nimestä voi päätellä, että kerros liittyy tavalla tai toisella sovelluksiin eli ohjelmiin, mutta verkkoselain (Edge, Chrome, Firefox, ...), eli siis se C/C++:lla ohjelmoitu sovellus, ei ole osa kerrosta 7. Sen sijaan verkkoselain noudattaa protokollaa, jos se lähettää protokollan mukaisen kyselyn palvelimelle. Ei ole, mutta noudattaa.</p>
+<h1 id="tiivistava-taulukko">Tiivistävä taulukko</h1>
+<p>Muista, että OSI-malli on yleinen tietoverkkoja selittävä malli, joten se ei välttämättä selitä jokaista protokollaperhettä pienintä nyanssia myöden. Varsinkin kerrokset 5-7 voivat mennä melko vahvasti sekaisin. Seuraavissa luvuissa tutustumme yhteen tiettyyn protokollaperheeseen, eli TCP/IP:hen, joka tunnetaan myös nimellä Internet Protocol Suite. Alla taulukko, joka pyrkii tiivistämään yllä olevien otsakkeiden tekstin nopeasti silmäiltäväksi muistilistaksi.</p>
+<table>
+<thead>
+<tr>
+<th>Kerros</th>
+<th>Nimi</th>
+<th>Päätehtävä</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>Application</td>
+<td>Asiakasohjelman kutsuma kerros</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Presentation</td>
+<td>Salaus, pakkaus, merkistön vaihto.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Session</td>
+<td>Istunnon ylläpitäminen.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Transport</td>
+<td>Viestit laareihin (eli portitus) sekä yhteydestä (jos protokolla on kytkentäinen)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Network</td>
+<td>Verkot jotka yhdistyvät toisiin verkkoihin (eli reititys)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Data Link</td>
+<td>Lokaalisti tavoitettavat verkot</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Physical</td>
+<td>Bittien käsittely viestiksi</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 <a href="https://www.kamk.fi">Kajaanin Ammattikorkeakoulu Oy</a>. 
+Licenced under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Kopioitu leikep\u00f6yd\u00e4lle", "clipboard.copy": "Kopioi leikep\u00f6yd\u00e4lle", "search.result.more.one": "1 lis\u00e4\u00e4 t\u00e4ll\u00e4 sivulla", "search.result.more.other": "# lis\u00e4\u00e4 t\u00e4ll\u00e4 sivulla", "search.result.none": "Ei t\u00e4sm\u00e4\u00e4vi\u00e4 dokumentteja", "search.result.one": "1 t\u00e4sm\u00e4\u00e4v\u00e4 dokumentti", "search.result.other": "# t\u00e4sm\u00e4\u00e4v\u00e4\u00e4 dokumenttia", "search.result.placeholder": "Kirjoita aloittaaksesi haun", "search.result.term.missing": "Puuttuu", "select.version": "Valitse versio"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

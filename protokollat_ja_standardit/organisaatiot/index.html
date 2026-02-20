@@ -1,0 +1,1555 @@
+
+<!doctype html>
+<html lang="fi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../internet/komennot/">
+      
+      
+        <link rel="next" href="../osi_malli/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Organisaatiot - Tietoliikenneohjelmointi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#globaalit-verkkojen-standardisointijarjestot" class="md-skip">
+          Hyppää sisältöön
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Ylätunniste">
+    <a href="../.." title="Tietoliikenneohjelmointi" class="md-header__button md-logo" aria-label="Tietoliikenneohjelmointi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tietoliikenneohjelmointi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Organisaatiot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Hae" placeholder="Hae" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Haku">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Tyhjää" aria-label="Tyhjää" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Aloitetaan hakua
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigaatio" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tietoliikenneohjelmointi" class="md-nav__button md-logo" aria-label="Tietoliikenneohjelmointi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tietoliikenneohjelmointi
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tervetuloa kurssille
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verkot
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Verkot
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/m%C3%A4%C3%A4ritelm%C3%A4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verkon määritelmä
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/terminologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminologia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/kommunikaatiometodit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kommunikaatiometodit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/skaala/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skaala
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verkot/verkon_laitteet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verkon laitteet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Internet
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Internet
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/osoitteet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Osoitteet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/nat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NAT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/nimet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nimet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/uri_ja_url/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    URI ja URL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internet/komennot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Komennot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protokollat ja standardit
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Protokollat ja standardit
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organisaatiot
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organisaatiot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#globaalit-verkkojen-standardisointijarjestot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globaalit (verkkojen) standardisointijärjestöt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internetin-standardien-jarjestot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internetin-standardien järjestöt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internetin-rekisterointi-ja-koordinaatiojarjestot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internetin rekisteröinti- ja koordinaatiojärjestöt
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../osi_malli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OSI-malli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tcp_malli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TCP/IP-malli
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../life_of_a_query/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Life of a Query
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reititys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reititys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sovellustaso
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sovellustaso
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/telnet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telnet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/http2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP/2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/https/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/websocket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebSocket
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/webhook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/mqtt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sovellustaso/quic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QUIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ohjelmointi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ohjelmointi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjelmointi/www_ohjelmointi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WWW-ohjelmointi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjelmointi/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjelmointi/rest_api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ohjelmointi/hakemistorakenne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hakemistorakenne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisällysluettelo">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisällysluettelo
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#globaalit-verkkojen-standardisointijarjestot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Globaalit (verkkojen) standardisointijärjestöt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internetin-standardien-jarjestot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internetin-standardien järjestöt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internetin-rekisterointi-ja-koordinaatiojarjestot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internetin rekisteröinti- ja koordinaatiojärjestöt
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Organisaatiot</h1>
+
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Q: What do you get when you cross a mobster with an international standard?</p>
+<p>A: Someone who makes you an offer you can't understand</p>
+<p>--- Paul Mockapetris</p>
+</div>
+<h2 id="globaalit-verkkojen-standardisointijarjestot">Globaalit (verkkojen) standardisointijärjestöt</h2>
+<p>Standardointijärjestöt vaikuttavat (ja ovatkin) byrokraattisilta organisaatioilta, mutta ilman yleisiä standardeja jokaisella eri yrityksellä olisi oma tapa toimia. Ilman standardeja meillä ei voisi olla Internetiä - tai ei ainakaan sellaisena kuin sen tunnemme. Järjestöjen keskinäiset kytkökset ovat monimutkaisia, ja standardin laatimiseen voi osallistua kerralla useampi eri järjestö. Alla esiteltynä lyhyesti muutama.</p>
+<p>International Standards Organisation (ISO) on 1946 perustettu kansainvälinen järjestö, johon kuuluu jokaisesta jäsenvaltiosta yksi jäsenjärjestö. Suomen jäsen on SFS, Yhdysvaltain ANSI, ja Iso-Britannian on BSI. Kaiken kaikkiaan jäseniä on yli 150. Koko lista löytyy <a href="https://www.iso.org/members.html">ISO:n verkkosivuilta</a>. Standardit eivät ole määräyksiä vaan suosituksia. Valitettavasti standardit eivät ole apaasti Internetissä saatavissa, vaan pääsy niihin pitää lunastaa kaupan kautta. Yli 25 tuhannen standardin katalogiin mahtuu kaikenlaista, kuten A4 ja muut paperikoot (ISO 216), teen keittäminen (ISO 3103), laadunhallintajärjestelmä (ISO 9001), sekä tietenkin tällä kurssilla käsitelty OSI-malli (ISO/IEC 7498).</p>
+<p>Kansainvälinen televiestintäliitto (International Telecommunication Union, ITU-T) ovat kaukana historiassa 1800-puolella lennättimissä. Nykyisin ITU-T toimii YK:n alaisuudessa ja siihen kuuluu  lähemmäs 200 jäsenvaltiota. Valtioiden lisäksi ITU-T:hen kuuluu toimialojen edustajia; Suomesta Nokia, Yhdysvalloista useita yrityksiä kuten Amazon, IBM, Netflix ja niin edelleen. Koko lista löytyy <a href="https://www.itu.int/hub/membership/our-members/directory/?myitu-industry=true&amp;request=sector-members">ITU-T:n sivuilta</a>. Internetin kannalta merkittäviä standardeja ovat muun muassa H.264-videokoodekki sekä X.509 eli julkisiin avaimiin perustuva salaus.</p>
+<p>Institute of Electrical and Electronics Engineers (IEEE) on kansainvälinen tekniikan alan ammatinharjoittajien - aivan valtava - yhdistys, jonka päätarkoitus on edistää teknologista innovaatiota ihmiskunnan eduksi. IEEE myy MAC-osoitelohkot niitä tarvitseville yrityksille. Yli 2000 standardin katalogista löytyy muun muassa 802.X-työryhmien standardeja, kuten IEEE 802.3-2022 (Ethernet) sekä IEEE 802.11-2020 (WLAN). IEEE:n standit käsittelevät myös muun muassa robotiikkaa, asioiden Internetiä (Internet of Things) sekä tekoälyä.</p>
+<h2 id="internetin-standardien-jarjestot">Internetin-standardien järjestöt</h2>
+<p>Computer Networks -kirjan kirjoittaja tiivistää suurten standardiorganisaatioiden ja Internet-standardeja kehittävien vapaaehtoisjärjestöjen eroa alla olevan lainauksen tavoin, kenties hieman huumorimielessä.</p>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>The difference can be crudely summed up by saying that the people who come to ITU or ISO standardization 
+meetings wear suits, while the people who come to Internet standardization meetings wear jeans. -- Andrew Tanenbaum</p>
+</div>
+<p>Internet Engineering Task Force (IETF) kehittää muiden muassa Internet-standardeja, joista yksi on TPC/IP eli Internet Protocol Suite. IETF:n teknisiä dokumenttejä kutsutaan Request for Comments (RFC) -nimellä. Näihin lyhenteisiin on vaikea olla törmäämättä verkkoihin liittyvää dokumentaatiota ja kirjallisuutta lukiessa. Muutamia merkittäviä ovat Internet Protocol eli IPv4-protokolla (RFC 791), IPv6 (RFC 2460), TCP (RFC 793), UDP (RFC 768) ja HTTP/1.1 (RFC 9112).  Toisin kuin ISO:n standardit, joihin saa pääsyn luottokorttia näyttämällä, nämä ovat kaikki saatavilla ilmaiseksi - mistäpä muualta kuin - Internetistä.</p>
+<p>Internet Research Task Force (IRTF) on IETF:n rinnakkainen järjestö, joka keskittyy lyhytaikaisten projektien ja toteutuksen sijasta pitkäaikaiseen tutkimukseen. Internet Architecture Board (IAB) sen sijaan tarkkailee näitä kahta.</p>
+<p>Internetin infrastruktuurin omistaa suurilta osin kaupalliset toimijat, mutta niiden tulee noudattaa edellä mainittujen vapaaehtoisjärjestöjen luomia protokollia, mikäli haluavat että viesti kulkee Internetissä luotettavalla tavalla.</p>
+<div class="admonition question">
+<p class="admonition-title">Tehtävä</p>
+<p>Etsi <a href="https://www.ietf.org/">IETF:n</a> sivuilta RFC-haku tai -katalogi. Tutustu pintapuoleisesti dokumenttiin: RFC 9112. Kokeile etsiä myös muita standardeja kurssilla esiintyneiden termien tai lyhenteiden perusteella. Huomaathan, että haussa on Additional Criteria, jonka avulla voi suodattaa pois muut kuin nykyhetken standardit <code>Status:</code> =&gt; <code>Standards Track:</code> =&gt; <code>Internet Standard</code>. AIB:n, IEFT:n ja IRTF:n yläpuolella on Internet Society (ISOC), joka pyrkii edistämään Internetin avointa kehitystä sekä tukee ja edistää sen alaisuudessa toimivien tahojen toimintaa.</p>
+</div>
+<p>Internet Governance Forum (IGF) on Yhdistyneiden Kansakuntien vuonna 2006 kokoonpanema järjestö, joka nostaa esille Internetin sosiaalisia ongelmia, ja pyrkii näin edistämään tasa-arvoa, saatavuutta sekä Internetin kestävää ja turvallista käyttöä.</p>
+<p>Muita yhdistyksiä ja järjestöjä on enemmän kuin tällä kurssilla tarvitsee luetella. Myös konsortioiden niiden suositukset voivat päätyä myös standardeiksi tai ainakin toimia niissä pohjana. W3C on (World Wide Web Consortium) on World Wide Webin (WWW) keksijän Tim Berners-Leen perustama yhteisö, joka kehittää avoimia standardeja tukemaan Internetin kasvua ja avoimmuutta. W3C:n visio kertoo paljon: "make the web work, for everyone" (elokuussa 2023.) W3C:n käytännöt käsittelevät muiden muassa HTML:ää, CSS:ää ja JavaScriptiä. Yksi mielenkiintoinen konsotio on Unicode Consortium, joka vastaa Unicode-merkistön kehittämisestä. Unicode-merkistö antaa ihmisten tuntemilla merkeille uniikin numeron, jolla ne voi tunnistaa. Lukaise esimerkiksi <a href="https://unicode.org/wg2/docs/n5111-17442-squirrel-emoji.pdf">tämä</a> ehdotus, joka perustelee, miksi lähinnä Pohjois-Amerikassa esiintyvät tikutaku-emojin <img alt="🐿" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f43f.svg" title=":chipmunk:" /> (eng. chipmunk) rinnalle pitäisi lisätä meille tutumman näköinen orava.</p>
+<h2 id="internetin-rekisterointi-ja-koordinaatiojarjestot">Internetin rekisteröinti- ja koordinaatiojärjestöt</h2>
+<p>Alunperin Internetin IP-numeroista ja domain-nimistä oli vastuussa Internet Assigned Numbers Authority (IANA), joka suuresta nimestään huolimatta oli käytännössä yksi henkilö.  DNS-rekisterin alkupisteenä on muistikirja, johon Jon Postel kirjasi ARPANET:n socket-numeroita. IANA oli Yhdysvaltain puolustusministeriön (DoD) valvovan silmän alla ja hallinnassa aina vuoteen 1998 asti, jolloin sen valvonta siirtyi tehtävää varten perustetulle järjestölle, joka tunnetaan nimellä ICANN (Internet Corporation for Assigned Names and Numbers). Vuonna 2016 IANA:n omistus siirrettiin kokonaisuudessaan ICANN:lle.</p>
+<p>Heidän omien verkkosivujensa mukaan heidän tehtävät ovat seuraavat (suomeksi käännettyinä):</p>
+<ul>
+<li>ICANN (<a href="https://www.icann.org/news/multimedia/1563">lähde</a>))<ul>
+<li>ICANN auttaa koordinoimaan internetin uniikkien tunnisteiden (IP-osoitteiden ja verkkotunnusten eli domain-nimien) sekä hallinnoi IETF:n protokollien parametrejä. </li>
+</ul>
+</li>
+<li>IANA (<a href="https://www.iana.org/about">lähde</a>)<ul>
+<li>Hallitsee nimipalvelimen (DNS) juurta (<code>.</code>), verkkotunnuksia <code>.int</code> ja <code>.arpa</code>, sekä non-latin (muut kuin <code>[A-Za-z]</code>) merkkejä sisältävien verkkotunnusten (Internationalized Domain Names, IDN) käytänteitä.</li>
+<li>Koordinoi IP-osoiteavaruutta ja AS-numeroita (Autonomous System Number). IANA delegoi osoite-alueiden hallinnan alueellisille verkkotunnushallinnoille (Regional Internet Registry, RIR.)</li>
+<li>Internet protocols’ numbering systems are managed in conjunction with standards bodies.</li>
+<li>IP-protokollan numerointijärjestelmien (eng. numbering system) hallintaa (IP-numerointia, porttinumerointia).</li>
+</ul>
+</li>
+</ul>
+<p>Tahojen tehtävä on varmasti monimutkainen ja yllättävänkin vaikea kuvata ulkopuoliselle lyhyessä "About Us"-sivustossa. Tällä kurssilla ei ole tarpeellista edes yrittää syväluotaavati tutustua ICANN:n tai sen alaisuudessa olevien organisaatioiden päätöksenhallintaan. On kuitenkin hyvä tunnistaa organisaatioiden nimet ja osata yhdistää ne DNS:ään, verkkotunnusten rekisteröintiin, ja IP-osoitteisiin.</p>
+<pre class="mermaid"><code>graph TD
+    ICANN["ICANN / IANA"] --&gt; AFRINIC
+    ICANN --&gt; APNIC
+    ICANN --&gt; ARIN
+    ICANN --&gt; LACNIC
+    ICANN --&gt; RIPE[RIPE NCC]</code></pre>
+<p><strong>Kuvio 1:</strong> <em>ICANN/IANA:n alaiset alueelliset hallinnot.</em></p>
+<div class="admonition question">
+<p class="admonition-title">Tehtävä</p>
+<p>Alueelliset verkkotunnushallinnot eli Regional Internet Registryt (RIR:t) seuraavat hyvin karkeasti katsottuna maanosia, mutta merkittäviä poikkeuksia löytyy. Etsi internetistä ICANN:n RIR kartta ja tutki, millaisia eri hallintojen toimialueet ovat.</p>
+</div>
+<p>Jos kattojärjestöjen, ICANN:n ja IANA:n, tehtävät tuntuvat päällekäisiltä tai hatarasti määriteltyinä, niin RIPE NCC ei jätä paljon arvailuiden varaan heidän etusivujen tekstin perusteella: <em>"We distribute Internet number resources to our members and provide tools to help them manage their allocations and assignments."</em>. Keitä sitten ovat heidän jäsenet? Käy katsomassa RIPE NCC:n sivuilta kaikki Suomen alueelle rekisteröidyt <a href="https://www.ripe.net/membership/indices/FI.html">paikalliset rekisteröintitoimistot</a> ja katso löydätkö yhtään tuttua yritystä - on aika yllättävää, jos et löydä!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 <a href="https://www.kamk.fi">Kajaanin Ammattikorkeakoulu Oy</a>. 
+Licenced under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Kopioitu leikep\u00f6yd\u00e4lle", "clipboard.copy": "Kopioi leikep\u00f6yd\u00e4lle", "search.result.more.one": "1 lis\u00e4\u00e4 t\u00e4ll\u00e4 sivulla", "search.result.more.other": "# lis\u00e4\u00e4 t\u00e4ll\u00e4 sivulla", "search.result.none": "Ei t\u00e4sm\u00e4\u00e4vi\u00e4 dokumentteja", "search.result.one": "1 t\u00e4sm\u00e4\u00e4v\u00e4 dokumentti", "search.result.other": "# t\u00e4sm\u00e4\u00e4v\u00e4\u00e4 dokumenttia", "search.result.placeholder": "Kirjoita aloittaaksesi haun", "search.result.term.missing": "Puuttuu", "select.version": "Valitse versio"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
