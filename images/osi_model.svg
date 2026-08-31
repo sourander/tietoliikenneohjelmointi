@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <rect x="0" y="0" width="800" height="600" style="fill:rgb(243,243,243);"/>
+    <g id="Cable" transform="matrix(1.10563,0,0,1,-159.817,0)">
+        <g transform="matrix(0.904459,-0,-0,1,144.548,-0)">
+            <path d="M542.921,560.159L550,546L557.079,560.159L542.921,560.159Z"/>
+            <path d="M79,546L79,559.388C79,562.998 80.434,566.46 82.987,569.013C85.54,571.566 89.002,573 92.613,573C161.169,573 468.037,573 536.45,573C540.043,573 543.49,571.572 546.031,569.031C548.572,566.49 550,563.043 550,559.45L550,557.327" style="fill:none;stroke:black;stroke-width:3px;"/>
+        </g>
+    </g>
+    <g id="LeftComputer">
+        <rect x="40" y="12" width="239" height="534" style="fill:rgb(255,225,195);stroke:black;stroke-width:2px;"/>
+        <g id="OSI-Physical" serif:id="OSI Physical" transform="matrix(1,0,0,1,-116,427)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,157,176);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,14.5498,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Physical</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">1</text>
+            </g>
+        </g>
+        <g id="OSI-Data-Link" serif:id="OSI Data Link" transform="matrix(1,0,0,1,-116,348)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,160,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,9.44336,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Data Link</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">2</text>
+            </g>
+        </g>
+        <g id="OSI-Network" serif:id="OSI Network" transform="matrix(1,0,0,1,-116,269)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,181,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,14.4663,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Network</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">3</text>
+            </g>
+        </g>
+        <g id="OSI-Transport" serif:id="OSI Transport" transform="matrix(1,0,0,1,-116,190)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,207,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,9.79932,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">T<tspan x="255.327px 261.321px " y="94px 94px ">ra</tspan>nsport</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">4</text>
+            </g>
+        </g>
+        <g id="OSI-Session" serif:id="OSI Session" transform="matrix(1,0,0,1,-116,111)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,221,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,16.3208,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Session</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">5</text>
+            </g>
+        </g>
+        <g id="OSI-Presentation" serif:id="OSI Presentation" transform="matrix(1,0,0,1,-116,32)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,221,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,-2.4834,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Presentation</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">6</text>
+            </g>
+        </g>
+        <g id="OSI-Application" serif:id="OSI Application" transform="matrix(1,0,0,1,-116,-47)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,221,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,-2,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Application</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">7</text>
+            </g>
+        </g>
+        <g id="Rajapinta12">
+            <g transform="matrix(1,0,0,1,0,395)">
+                <g transform="matrix(1,-0,-0,1,0,-395)">
+                    <path d="M86.148,483.136L78,494L69.852,483.136L86.148,483.136Z"/>
+                    <path d="M78,459L78,485.309" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,380.736)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 1/2 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta23">
+            <g transform="matrix(1,0,0,1,0,316)">
+                <g transform="matrix(1,-0,-0,1,0,-316)">
+                    <path d="M86.148,404.136L78,415L69.852,404.136L86.148,404.136Z"/>
+                    <path d="M78,380L78,406.309" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,301.736)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 2/3 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta34">
+            <g transform="matrix(1,0,0,1,0,237)">
+                <g transform="matrix(1,-0,-0,1,0,-237)">
+                    <path d="M86.148,325.136L78,336L69.852,325.136L86.148,325.136Z"/>
+                    <path d="M78,301L78,327.309" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,222.736)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 3/4 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta45">
+            <g transform="matrix(1,0,0,1,0,158)">
+                <g transform="matrix(1,-0,-0,1,0,-158)">
+                    <path d="M86.148,246.136L78,257L69.852,246.136L86.148,246.136Z"/>
+                    <path d="M78,222L78,248.309" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,143.736)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 4/5 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta56">
+            <g transform="matrix(1,0,0,1,0,79)">
+                <g transform="matrix(1,-0,-0,1,0,-79)">
+                    <path d="M86.148,167.136L78,178L69.852,167.136L86.148,167.136Z"/>
+                    <path d="M78,143L78,169.309" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,63.7363)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 5/6 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta67">
+            <path d="M86.148,88.136L78,99L69.852,88.136L86.148,88.136Z"/>
+            <path d="M78,64L78,90.309" style="fill:none;stroke:black;stroke-width:2px;"/>
+            <g transform="matrix(1,0,0,1,-219.281,-15.2637)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 6/7 rajapinta</text>
+            </g>
+        </g>
+    </g>
+    <g id="RightComputer" transform="matrix(1,0,0,1,474,0)">
+        <g transform="matrix(1,0,0,1,-474,0)">
+            <rect x="514" y="12" width="239" height="534" style="fill:rgb(255,225,195);stroke:black;stroke-width:2px;"/>
+        </g>
+        <g id="OSI-Physical1" serif:id="OSI Physical" transform="matrix(1,0,0,1,-116,427)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,157,176);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,14.5498,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Physical</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">1</text>
+            </g>
+        </g>
+        <g id="OSI-Data-Link1" serif:id="OSI Data Link" transform="matrix(1,0,0,1,-116,348)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,160,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,9.44336,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Data Link</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">2</text>
+            </g>
+        </g>
+        <g id="OSI-Network1" serif:id="OSI Network" transform="matrix(1,0,0,1,-116,269)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,181,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,14.4663,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Network</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">3</text>
+            </g>
+        </g>
+        <g id="OSI-Transport1" serif:id="OSI Transport" transform="matrix(1,0,0,1,-116,190)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,207,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,9.79932,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">T<tspan x="255.327px 261.321px " y="94px 94px ">ra</tspan>nsport</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">4</text>
+            </g>
+        </g>
+        <g id="OSI-Session1" serif:id="OSI Session" transform="matrix(1,0,0,1,-116,111)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,221,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,16.3208,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Session</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">5</text>
+            </g>
+        </g>
+        <g id="OSI-Presentation1" serif:id="OSI Presentation" transform="matrix(1,0,0,1,-116,32)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,221,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,-2.4834,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Presentation</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">6</text>
+            </g>
+        </g>
+        <g id="OSI-Application1" serif:id="OSI Application" transform="matrix(1,0,0,1,-116,-47)">
+            <g transform="matrix(0.941704,0,0,1,95.6637,1)">
+                <rect x="80" y="66" width="223" height="44" style="fill:rgb(255,221,157);stroke:black;stroke-width:0.99px;stroke-linecap:round;"/>
+            </g>
+            <path d="M213,67L213,111" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,-2,-0.346191)">
+                <text x="245px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">Application</text>
+            </g>
+            <g transform="matrix(1,0,0,1,3,1.35889)">
+                <text x="184px" y="94px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:18px;">7</text>
+            </g>
+        </g>
+        <g id="Rajapinta121" serif:id="Rajapinta12">
+            <g transform="matrix(-1,-1.22465e-16,1.22465e-16,-1,156,558)">
+                <g transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,630,558)">
+                    <path d="M543.852,469.864L552,459L560.148,469.864L543.852,469.864Z"/>
+                    <path d="M552,494L552,467.691" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,380.736)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 1/2 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta231" serif:id="Rajapinta23">
+            <g transform="matrix(-1,-1.22465e-16,1.22465e-16,-1,156,479)">
+                <g transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,630,479)">
+                    <path d="M543.852,390.864L552,380L560.148,390.864L543.852,390.864Z"/>
+                    <path d="M552,415L552,388.691" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,301.736)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 2/3 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta341" serif:id="Rajapinta34">
+            <g transform="matrix(-1,-1.22465e-16,1.22465e-16,-1,156,400)">
+                <g transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,630,400)">
+                    <path d="M543.852,311.864L552,301L560.148,311.864L543.852,311.864Z"/>
+                    <path d="M552,336L552,309.691" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,222.736)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 3/4 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta451" serif:id="Rajapinta45">
+            <g transform="matrix(-1,-1.22465e-16,1.22465e-16,-1,156,321)">
+                <g transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,630,321)">
+                    <path d="M543.852,232.864L552,222L560.148,232.864L543.852,232.864Z"/>
+                    <path d="M552,257L552,230.691" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,143.736)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 4/5 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta561" serif:id="Rajapinta56">
+            <g transform="matrix(-1,-1.22465e-16,1.22465e-16,-1,156,242)">
+                <g transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,630,242)">
+                    <path d="M543.852,153.864L552,143L560.148,153.864L543.852,153.864Z"/>
+                    <path d="M552,178L552,151.691" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,63.7363)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 5/6 rajapinta</text>
+            </g>
+        </g>
+        <g id="Rajapinta671" serif:id="Rajapinta67">
+            <g transform="matrix(-1,-1.22465e-16,1.22465e-16,-1,156,163)">
+                <g transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,630,163)">
+                    <path d="M543.852,74.864L552,64L560.148,74.864L543.852,74.864Z"/>
+                    <path d="M552,99L552,72.691" style="fill:none;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,-219.281,-15.2637)">
+                <text x="336px" y="99px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="342px 348.674px " y="99px 99px ">as</tspan>ojen 6/7 rajapinta</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(0.896947,0,0,1.51852,41.3092,-23.5556)">
+        <path d="M287.394,46.2C285.221,52.485 275.861,57 265,57L265,30C275.861,30 285.221,34.515 287.394,40.8L504.606,40.8C506.779,34.515 516.139,30 527,30L527,57C516.139,57 506.779,52.485 504.606,46.2L287.394,46.2Z" style="fill:rgb(255,221,157);stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(0.896947,0,0,1.51852,41.3092,55.4444)">
+        <path d="M287.394,46.2C285.221,52.485 275.861,57 265,57L265,30C275.861,30 285.221,34.515 287.394,40.8L504.606,40.8C506.779,34.515 516.139,30 527,30L527,57C516.139,57 506.779,52.485 504.606,46.2L287.394,46.2Z" style="fill:rgb(255,221,157);stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(0.896947,0,0,1.51852,41.3092,134.444)">
+        <path d="M287.394,46.2C285.221,52.485 275.861,57 265,57L265,30C275.861,30 285.221,34.515 287.394,40.8L504.606,40.8C506.779,34.515 516.139,30 527,30L527,57C516.139,57 506.779,52.485 504.606,46.2L287.394,46.2Z" style="fill:rgb(255,221,157);stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(0.896947,0,0,1.51852,41.3092,213.444)">
+        <path d="M287.394,46.2C285.221,52.485 275.861,57 265,57L265,30C275.861,30 285.221,34.515 287.394,40.8L504.606,40.8C506.779,34.515 516.139,30 527,30L527,57C516.139,57 506.779,52.485 504.606,46.2L287.394,46.2Z" style="fill:rgb(255,207,157);stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(0.896947,0,0,1.51852,41.3092,292.444)">
+        <path d="M287.394,46.2C285.221,52.485 275.861,57 265,57L265,30C275.861,30 285.221,34.515 287.394,40.8L504.606,40.8C506.779,34.515 516.139,30 527,30L527,57C516.139,57 506.779,52.485 504.606,46.2L287.394,46.2Z" style="fill:rgb(255,181,157);stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(0.896947,0,0,1.51852,41.3092,371.444)">
+        <path d="M287.394,46.2C285.221,52.485 275.861,57 265,57L265,30C275.861,30 285.221,34.515 287.394,40.8L504.606,40.8C506.779,34.515 516.139,30 527,30L527,57C516.139,57 506.779,52.485 504.606,46.2L287.394,46.2Z" style="fill:rgb(255,160,157);stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(0.896947,0,0,1.51852,41.3092,450.444)">
+        <path d="M287.394,46.2C285.221,52.485 275.861,57 265,57L265,30C275.861,30 285.221,34.515 287.394,40.8L504.606,40.8C506.779,34.515 516.139,30 527,30L527,57C516.139,57 506.779,52.485 504.606,46.2L287.394,46.2Z" style="fill:rgb(255,157,176);stroke:black;stroke-width:1.6px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,13.917,-3.41016)">
+        <text x="334px" y="36px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="340px 346.674px " y="36px 36px ">as</tspan>on 7 protokolla</text>
+    </g>
+    <g transform="matrix(1,0,0,1,13.917,73.5898)">
+        <text x="334px" y="36px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="340px 346.674px " y="36px 36px ">as</tspan>on 6 protokolla</text>
+    </g>
+    <g transform="matrix(1,0,0,1,13.917,152.59)">
+        <text x="334px" y="36px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="340px 346.674px " y="36px 36px ">as</tspan>on 5 protokolla</text>
+    </g>
+    <g transform="matrix(1,0,0,1,13.917,233.59)">
+        <text x="334px" y="36px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="340px 346.674px " y="36px 36px ">as</tspan>on 4 protokolla</text>
+    </g>
+    <g transform="matrix(1,0,0,1,13.917,312.59)">
+        <text x="334px" y="36px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="340px 346.674px " y="36px 36px ">as</tspan>on 3 protokolla</text>
+    </g>
+    <g transform="matrix(1,0,0,1,13.917,391.59)">
+        <text x="334px" y="36px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="340px 346.674px " y="36px 36px ">as</tspan>on 2 protokolla</text>
+    </g>
+    <g transform="matrix(1,0,0,1,13.917,470.59)">
+        <text x="334px" y="36px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">T<tspan x="340px 346.674px " y="36px 36px ">as</tspan>on 1 protokolla</text>
+    </g>
+</svg>
